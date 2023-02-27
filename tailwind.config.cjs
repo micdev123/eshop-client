@@ -6,7 +6,7 @@ module.exports = {
   ],
   theme: {
     screens: {
-      'sm': '640px',
+      'sm': '480px',
       'md': '768px',
       'lg': '1024px',
       'xl': '1280px',
@@ -20,7 +20,8 @@ module.exports = {
         'lighterBlue': '#F5F5F8',
         'bgWhite': '#FAFAFA',
         'ratingBg': '#FFC850',
-        'lightBlack': '#797979'
+        'lightBlack': '#797979',
+        'lighterOrange': '#FBF4EE',
       }
     },
   },
