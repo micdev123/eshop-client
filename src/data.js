@@ -1,4 +1,4 @@
-const collectionSlider = [
+export const collectionSlider = [
     {
         id: 1,
         collection_name: 'Computers & Accessories',
@@ -26,7 +26,7 @@ const collectionSlider = [
 ];
 
 
-const collectionProductSlider = [
+export const collectionProductSlider = [
     {
         id: 1,
         product_img: '/assets/p6.png',
@@ -117,11 +117,100 @@ const collectionProductSlider = [
         product_price_discount: 98,
         category: 'beauty picks',
     },
+    {
+        id: 10,
+        product_img: '/assets/pp8.png',
+        product_name: 'Brown Comfy Chair',
+        rating: 4,
+        reviews: '1,005',
+        product_price_original: 110,
+        product_price_discount: 98,
+        category: 'health & household',
+    },
 ]
 
 
 
-const featuredCollection = [];
+export const featuredCollection = [
+    {
+        id: 1,
+        product_img: '/assets/p11.png',
+        product_name: 'Wireless Black Earbud',
+        rating: 4,
+        reviews: '1,245',
+        product_price_original: 220,
+        product_price_discount: 115,
+        category: 'electronics',
+        brand: 'araimo'
+    },
+    {
+        id: 2,
+        product_img: '/assets/p11.png',
+        product_name: 'Wireless Black Earbud',
+        rating: 4,
+        reviews: '1,245',
+        product_price_original: 220,
+        product_price_discount: 115,
+        category: 'electronics',
+        brand: 'araimo'
+    },
+    {
+        id: 3,
+        product_img: '/assets/p11.png',
+        product_name: 'Wireless Black Earbud',
+        rating: 4,
+        reviews: '1,245',
+        product_price_original: 220,
+        product_price_discount: 115,
+        category: 'electronics',
+        brand: 'araimo'
+    },
+    {
+        id: 4,
+        product_img: '/assets/p11.png',
+        product_name: 'Wireless Black Earbud',
+        rating: 4,
+        reviews: '1,245',
+        product_price_original: 220,
+        product_price_discount: 115,
+        category: 'electronics',
+        brand: 'araimo'
+    },
+    {
+        id: 5,
+        product_img: '/assets/p11.png',
+        product_name: 'Wireless Black Earbud',
+        rating: 4,
+        reviews: '1,245',
+        product_price_original: 220,
+        product_price_discount: 115,
+        category: 'electronics',
+        brand: 'araimo'
+    },
+    {
+        id: 5,
+        product_img: '/assets/p11.png',
+        product_name: 'Wireless Black Earbud',
+        rating: 4,
+        reviews: '1,245',
+        product_price_original: 220,
+        product_price_discount: 115,
+        category: 'electronics',
+        brand: 'araimo'
+    },
+    {
+        id: 6,
+        product_img: '/assets/p11.png',
+        product_name: 'Wireless Black Earbud',
+        rating: 4,
+        reviews: '1,245',
+        product_price_original: 220,
+        product_price_discount: 115,
+        category: 'electronics',
+        brand: 'araimo'
+    },
+    
+];
 
 const topSellersCollection = [];
 
