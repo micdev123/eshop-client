@@ -20,9 +20,23 @@ body {
 }
 
 
+
 .main_nav_left p {
     font-size: 0.9rem;
     font-weight: 500;
+}
+
+/* .product {
+    transition: all 3s ease-in-out;
+}
+
+.the_icons {
+    transition: all 3s ease-in-out;
+} */
+
+.product:hover .the_icons {
+    display: block;
+    transition: all 3s ease-in-out;
 }
 
 
@@ -43,6 +57,6 @@ body {
 
     .main_nav_left p {
         font-size: 0.87rem;
-    }
+    } 
     
 }

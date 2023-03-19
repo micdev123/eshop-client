@@ -1,25 +1,29 @@
-export const collectionSlider = [
+export const categories = [
     {
         id: 1,
-        collection_name: 'Computers & Accessories',
+        collection_name: 'Electronics',
+        photo: '/assets/computer.png',
         desc: 'Shop laptops, desktops, monitors, tablets, PC gaming, hard drives and storage, accessories and more..',
         category: 'electronics',
     },
     {
         id: 2,
         collection_name: 'Beauty Picks',
+        photo: '/assets/beauty.png',
         desc: 'Discover our beauty selection and shop beauty lipsticks, clone, beauty accessories and more..',
         category: 'beauty picks',
     },
     {
         id: 3,
         collection_name: 'Fashion',
+        photo: '/assets/pp4.png',
         desc: 'Discover our fashion collection and shop clothes, shoes, bags, other fashion accessories and more..',
         category: 'fashion',
     },
     {
         id: 4,
         collection_name: 'Health & Household',
+        photo: '/assets/pp8.png',
         desc: 'Refresh your household by shopping household essentials, health collection and more..',
         category: 'health & household',
     },
@@ -39,8 +43,8 @@ export const collectionProductSlider = [
     },
     {
         id: 2,
-        product_img: '/assets/p11.png',
-        product_name: 'Wireless Black Earbud',
+        product_img: '/assets/p3.png',
+        product_name: 'LG Meridian Wireless Black Earbud',
         rating: 4,
         reviews: '1,245',
         product_price_original: 220,
@@ -49,8 +53,8 @@ export const collectionProductSlider = [
     },
     {
         id: 3,
-        product_img: '/assets/p63.png',
-        product_name: 'Wireless Bluetooth Black Speaker',
+        product_img: '/assets/pp15.png',
+        product_name: 'RealmeOppA5s | Andriod Smart Phone',
         rating: 3,
         reviews: '1,245',
         product_price_original: 220,
@@ -60,7 +64,7 @@ export const collectionProductSlider = [
     {
         id: 4,
         product_img: '/assets/pp1.png',
-        product_name: 'Light Green Sport Sneaker',
+        product_name: 'Dark Blue Sport Sneaker',
         rating: 5,
         reviews: '1,105',
         product_price_original: 120,
@@ -70,7 +74,7 @@ export const collectionProductSlider = [
     {
         id: 5,
         product_img: '/assets/pp2.png',
-        product_name: 'Dark Green Sport Sneaker',
+        product_name: 'Dark Brown Ladder Shoe',
         rating: 4,
         reviews: '1,105',
         product_price_original: 130,
@@ -80,7 +84,7 @@ export const collectionProductSlider = [
     {
         id: 6,
         product_img: '/assets/pp3.png',
-        product_name: 'Dark Red Nike Sport Sneaker',
+        product_name: 'Gray & White Long Sleeve T-Shirt',
         rating: 4,
         reviews: '105',
         product_price_original: 230,
@@ -90,7 +94,7 @@ export const collectionProductSlider = [
     {
         id: 7,
         product_img: '/assets/pp4.png',
-        product_name: 'Dark Blue Long Sleeve T-shirt',
+        product_name: 'Brown Long Sleeve Ladder Jacket',
         rating: 5,
         reviews: '1,005',
         product_price_original: 230,
@@ -99,8 +103,8 @@ export const collectionProductSlider = [
     },
     {
         id: 8,
-        product_img: '/assets/pp6.png',
-        product_name: 'Pink Lipstick',
+        product_img: '/assets/pp14.png',
+        product_name: 'Clear Glass Bottle With Yellow Liquid',
         rating: 5,
         reviews: '1,005',
         product_price_original: 130,
@@ -109,8 +113,8 @@ export const collectionProductSlider = [
     },
     {
         id: 9,
-        product_img: '/assets/pp6.png',
-        product_name: 'Blue Lipstick',
+        product_img: '/assets/pp16.png',
+        product_name: 'White and Gold Container Body Oil',
         rating: 4,
         reviews: '1,005',
         product_price_original: 110,
@@ -119,8 +123,38 @@ export const collectionProductSlider = [
     },
     {
         id: 10,
+        product_img: '/assets/pp10.png',
+        product_name: 'White Labeled Clear Plastic Bottle',
+        rating: 4,
+        reviews: '1,005',
+        product_price_original: 110,
+        product_price_discount: 98,
+        category: 'beauty picks',
+    },
+    {
+        id: 11,
+        product_img: '/assets/pp9.png',
+        product_name: 'Keener All Wood Round Dining Table',
+        rating: 4,
+        reviews: '1,005',
+        product_price_original: 110,
+        product_price_discount: 98,
+        category: 'health & household',
+    },
+    {
+        id: 12,
         product_img: '/assets/pp8.png',
-        product_name: 'Brown Comfy Chair',
+        product_name: 'Classique Wood Chair Cane Backrest',
+        rating: 4,
+        reviews: '1,005',
+        product_price_original: 110,
+        product_price_discount: 98,
+        category: 'health & household',
+    },
+    {
+        id: 13,
+        product_img: '/assets/pp12.png',
+        product_name: 'Modern Wooden Parametric Petal Chair',
         rating: 4,
         reviews: '1,005',
         product_price_original: 110,
@@ -131,7 +165,7 @@ export const collectionProductSlider = [
 
 
 
-export const featuredCollection = [
+export const products = [
     {
         id: 1,
         product_img: '/assets/p11.png',
@@ -139,9 +173,11 @@ export const featuredCollection = [
         rating: 4,
         reviews: '1,245',
         product_price_original: 220,
-        product_price_discount: 115,
+        // product_price_discount: 115,
         category: 'electronics',
-        brand: 'araimo'
+        brand: 'araimo',
+        tag: 'best seller',
+        level: ['featured', 'recentViewed', 'lastMinute']
     },
     {
         id: 2,
@@ -152,7 +188,9 @@ export const featuredCollection = [
         product_price_original: 220,
         product_price_discount: 115,
         category: 'electronics',
-        brand: 'araimo'
+        brand: 'araimo',
+        tag: 'best seller',
+        level: ['topSelling', 'recentViewed', 'lastMinute']
     },
     {
         id: 3,
@@ -163,7 +201,9 @@ export const featuredCollection = [
         product_price_original: 220,
         product_price_discount: 115,
         category: 'electronics',
-        brand: 'araimo'
+        brand: 'araimo',
+        tag: 'best seller',
+        level: ['featured', 'recentViewed']
     },
     {
         id: 4,
@@ -174,7 +214,9 @@ export const featuredCollection = [
         product_price_original: 220,
         product_price_discount: 115,
         category: 'electronics',
-        brand: 'araimo'
+        brand: 'araimo',
+        tag: 'best seller',
+        level: ['featured', 'recentViewed', 'lastMinute']
     },
     {
         id: 5,
@@ -185,18 +227,9 @@ export const featuredCollection = [
         product_price_original: 220,
         product_price_discount: 115,
         category: 'electronics',
-        brand: 'araimo'
-    },
-    {
-        id: 5,
-        product_img: '/assets/p11.png',
-        product_name: 'Wireless Black Earbud',
-        rating: 4,
-        reviews: '1,245',
-        product_price_original: 220,
-        product_price_discount: 115,
-        category: 'electronics',
-        brand: 'araimo'
+        brand: 'araimo',
+        tag: 'best seller',
+        level: ['featured', 'recentViewed']
     },
     {
         id: 6,
@@ -207,13 +240,141 @@ export const featuredCollection = [
         product_price_original: 220,
         product_price_discount: 115,
         category: 'electronics',
-        brand: 'araimo'
+        brand: 'araimo',
+        tag: 'best seller',
+        level: ['topSelling', 'lastMinute']
+    },
+    {
+        id: 7,
+        product_img: '/assets/p11.png',
+        product_name: 'Wireless Black Earbud',
+        rating: 4,
+        reviews: '1,245',
+        product_price_original: 220,
+        product_price_discount: 115,
+        category: 'electronics',
+        brand: 'araimo',
+        tag: 'best seller',
+        level: ['featured']
+    },
+    {
+        id: 8,
+        product_img: '/assets/p11.png',
+        product_name: 'Wireless Black Earbud',
+        rating: 4,
+        reviews: '1,245',
+        product_price_original: 220,
+        product_price_discount: 115,
+        category: 'electronics',
+        brand: 'araimo',
+        tag: 'best seller',
+        level: ['featured', , 'lastMinute']
+    },
+    {
+        id: 9,
+        product_img: '/assets/p11.png',
+        product_name: 'Wireless Black Earbud',
+        rating: 4,
+        reviews: '1,245',
+        product_price_original: 220,
+        product_price_discount: 115,
+        category: 'electronics',
+        brand: 'araimo',
+        tag: 'best seller',
+        level: ['topSelling', 'recentViewed', 'lastMinute']
+    },
+    {
+        id: 10,
+        product_img: '/assets/p11.png',
+        product_name: 'Wireless Black Earbud',
+        rating: 4,
+        reviews: '1,245',
+        product_price_original: 220,
+        product_price_discount: 115,
+        category: 'electronics',
+        brand: 'araimo',
+        tag: 'best seller',
+        level: ['featured', 'recentViewed']
+    },
+    {
+        id: 11,
+        product_img: '/assets/p11.png',
+        product_name: 'Wireless Black Earbud',
+        rating: 4,
+        reviews: '1,245',
+        product_price_original: 220,
+        product_price_discount: 115,
+        category: 'electronics',
+        brand: 'araimo',
+        tag: 'best seller',
+        level: ['featured', 'recentViewed']
+    },
+    {
+        id: 12,
+        product_img: '/assets/p11.png',
+        product_name: 'Wireless Black Earbud',
+        rating: 4,
+        reviews: '1,245',
+        product_price_original: 220,
+        product_price_discount: 115,
+        category: 'electronics',
+        brand: 'araimo',
+        tag: 'best seller',
+        level: ['featured', 'recentViewed']
+    },
+    {
+        id: 13,
+        product_img: '/assets/p11.png',
+        product_name: 'Wireless Black Earbud',
+        rating: 4,
+        reviews: '1,245',
+        product_price_original: 220,
+        product_price_discount: 115,
+        category: 'electronics',
+        brand: 'araimo',
+        tag: 'best seller',
+        level: ['topSelling']
+    },
+    {
+        id: 14,
+        product_img: '/assets/p11.png',
+        product_name: 'Wireless Black Earbud',
+        rating: 4,
+        reviews: '1,245',
+        product_price_original: 220,
+        product_price_discount: 115,
+        category: 'electronics',
+        brand: 'araimo',
+        tag: 'best seller',
+        level: ['topSelling', 'recentViewed']
+    },
+    {
+        id: 15,
+        product_img: '/assets/p11.png',
+        product_name: 'Wireless Black Earbud',
+        rating: 4,
+        reviews: '1,245',
+        product_price_original: 220,
+        product_price_discount: 115,
+        category: 'electronics',
+        brand: 'araimo',
+        tag: 'best seller',
+        level: ['topSelling', 'recentViewed']
+    },
+    {
+        id: 16,
+        product_img: '/assets/p11.png',
+        product_name: 'Wireless Black Earbud',
+        rating: 4,
+        reviews: '1,245',
+        product_price_original: 220,
+        product_price_discount: 115,
+        category: 'electronics',
+        brand: 'araimo',
+        tag: 'best seller',
+        level: ['topSelling']
     },
     
 ];
 
-const topSellersCollection = [];
-
 const lastMinuteDeal = [];
-
-const lastViewedCollection = []

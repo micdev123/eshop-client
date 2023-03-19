@@ -5,15 +5,15 @@ import { BiLeftArrowCircle, BiRightArrowCircle } from 'react-icons/bi'
 const LastMinuteDeals = () => {
     return (
         <section className='my-7'>
-            <div className="last_minute_deal_header flex items-center justify-between mb-[5px]">
-                <h2 className='text-[14px] font-medium text-black lg:text-[15px]'>Last Minute Deals</h2>
+            <div className="last_minute_deal_header flex items-center justify-between mb-[5px] dark:text-slate-200">
+                <h2 className='text-[14px] font-medium text-black lg:text-[15px] dark:text-slate-200'>Last Minute Deals</h2>
                 <div className="navigation flex items-center lg:hidden">
                     <BiLeftArrowCircle className='text-[1.1rem] mr-2' />
                     <BiRightArrowCircle className='text-[1.1rem]' />
                 </div>
             </div>
             <div className="Deals flex items-center gap-2">
-                <div className="deal_type w-[100vw] bg-lighterOrange flex items-center px-3 md:pl-8 lg:pr-2">
+                <div className="deal_type w-[100vw] bg-lighterOrange flex items-center px-3 md:pl-8 lg:pr-2 dark:bg-gray-700 dark:text-slate-200">
                     <div className="left">
                         <div className="basic_text w-[11.5rem] pt-4 md:pt-8 md:w-[16rem]">
                             <h2 className='text-[1.1rem] font-semibold md:text-[1.3rem]'>Comfy styles for her</h2>
@@ -27,8 +27,8 @@ const LastMinuteDeals = () => {
                                     <img src="/assets/bag.png" alt="bag" className='w-[100%] h-[100%] object-contain' />
                                 </div>
                                 <div className="basic_text mx-1 md:mx-3">
-                                    <p className='text-[11px] font-semibold text-black py-1 md:text-[13px]'>Top Backpack</p>
-                                    <p className='text-[9px] text-lightBlack md:text-[10px]'>Big sale -30%</p>
+                                    <p className='text-[11px] font-semibold text-black py-1 md:text-[13px] dark:text-slate-200'>Top Backpack</p>
+                                    <p className='text-[9px] text-lightBlack md:text-[10px] dark:text-slate-400'>Big sale -30%</p>
                                 </div>
                             </div>
                             <div className="next_slide">
@@ -41,7 +41,7 @@ const LastMinuteDeals = () => {
                     </div>
                 </div>
 
-                 <div className="deal_type w-[100vw] bg-lighterBlue flex items-center px-3 md:pl-8 lg:pr-2">
+                 <div className="deal_type w-[100vw] bg-lighterBlue flex items-center px-3 md:pl-8 lg:pr-2 dark:bg-slate-800 dark:text-slate-200">
                     <div className="left">
                         <div className="basic_text w-[11.5rem] pt-4 md:pt-8 md:w-[16rem]">
                             <h2 className='text-[1.1rem] font-semibold md:text-[1.3rem]'>Comfy styles for him</h2>
@@ -55,8 +55,8 @@ const LastMinuteDeals = () => {
                                     <img src="/assets/bag.png" alt="bag" className='w-[100%] h-[100%] object-contain' />
                                 </div>
                                 <div className="basic_text mx-1 md:mx-3">
-                                    <p className='text-[11px] font-semibold text-black py-1 md:text-[13px]'>Top Backpack</p>
-                                    <p className='text-[9px] text-lightBlack md:text-[10px]'>Big sale -30%</p>
+                                    <p className='text-[11px] font-semibold text-black py-1 md:text-[13px] dark:text-slate-200'>Top Backpack</p>
+                                    <p className='text-[9px] text-lightBlack md:text-[10px] dark:text-slate-400'>Big sale -30%</p>
                                 </div>
                             </div>
                             <div className="next_slide">

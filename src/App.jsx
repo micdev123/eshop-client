@@ -5,18 +5,20 @@ import MainNav from './components/Header/MainNav';
 import Footer from './components/Footer/Footer';
 
 const App = () => {
-    return (
-      <div className=''>
-        <header className='w-[92%] mx-auto md:w-[85%]'>
-          <TopNav />
-          <MainNav />
-        </header>
+  return (
+    <div className='App relative dark:bg-slate-900'>
+      <header className='w-[92%] mx-auto md:w-[85%]'>
+        <TopNav />
+        <MainNav />
+      </header>
+      <main className='main'>
         <Home />
-        <footer className='w-[92%] mx-auto md:w-[85%]'>
-          <Footer />
-        </footer>
-      </div>
-    )
+      </main>
+      <footer className='w-[92%] mx-auto md:w-[85%]'>
+        <Footer />
+      </footer>
+    </div>
+  )
 }
 
 export default App

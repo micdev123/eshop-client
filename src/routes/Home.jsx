@@ -9,9 +9,9 @@ import TopSellers from '../components/Home/TopSellers'
 import YourSearchHistory from '../components/Home/YourSearchHistory'
 const Home = () => {
     return (
-        <div className='w-[92%] mx-auto md:w-[85%] overflow-hidden'>
+        <div className='home w-[92%] mx-auto md:w-[85%] overflow-hidden'>
             <HeaderBody />
-            <HeaderFooter />
+            {/* <HeaderFooter /> */}
             <div className="main">
                 <Categories />
                 <Offers />
