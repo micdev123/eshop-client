@@ -34,11 +34,11 @@ export const collectionProductSlider = [
     {
         id: 1,
         product_img: '/assets/p6.png',
-        product_name: 'JBL T460BT Black Earbud',
+        product_name: 'JBL T460BT Black Portable Earbud',
         rating: 5,
         reviews: '1,245',
         product_price_original: 250,
-        product_price_discount: 125,
+        // product_price_discount: 125,
         category: 'electronics',
     },
     {
@@ -170,7 +170,7 @@ export const products = [
         id: 1,
         product_img: '/assets/p11.png',
         product_name: 'Wireless Black Earbud',
-        rating: 4,
+        rating: 2.5,
         reviews: '1,245',
         product_price_original: 220,
         // product_price_discount: 115,
@@ -183,7 +183,7 @@ export const products = [
         id: 2,
         product_img: '/assets/p11.png',
         product_name: 'Wireless Black Earbud',
-        rating: 4,
+        rating: 3.5,
         reviews: '1,245',
         product_price_original: 220,
         product_price_discount: 115,
@@ -377,4 +377,20 @@ export const products = [
     
 ];
 
-const lastMinuteDeal = [];
+export const lastMinuteDeals = [
+    {
+        deal_img: '/assets/bag.png',
+        deal_name: 'Top Backpacks',
+        deal_percent: 30
+    },
+    {
+        deal_img: '/assets/pp17.png',
+        deal_name: 'Smart Devices',
+        deal_percent: 30
+    },
+    {
+        deal_img: '/assets/pp9.png',
+        deal_name: 'Household Deals',
+        deal_percent: 30
+    }
+];

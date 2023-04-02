@@ -1,8 +1,36 @@
-import React from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { BiLeftArrowCircle, BiRightArrowCircle } from 'react-icons/bi'
+import { lastMinuteDeals } from '../../data';
+import Deal from '../Deal';
 
-
+let count = 0;
 const LastMinuteDeals = () => {
+    const [curr, setCurr] = useState(0);
+    const lastMinuteRef = useRef(null);
+
+    const removeAnimation = () => {
+        lastMinuteRef.current.classList.remove("fade-anim");
+    };
+
+    useEffect(() => {
+        lastMinuteRef.current.addEventListener("animationend", removeAnimation);
+        startSlider()
+    }, [])
+
+    const startSlider = () => {
+        const slideInterval = setInterval(() => {
+            handleNext()
+        }, 3000)
+        return () => clearInterval(slideInterval);
+    }
+
+    const handleNext = () => {
+        count = (count + 1) % lastMinuteDeals.length;
+        setCurr(count);
+        lastMinuteRef.current.classList.add("fade-anim");
+    }
+
+     if (!lastMinuteDeals || !lastMinuteDeals.length) return null;
     return (
         <section className='my-7'>
             <div className="last_minute_deal_header flex items-center justify-between mb-[5px] dark:text-slate-200">
@@ -21,18 +49,15 @@ const LastMinuteDeals = () => {
                                 Shop e-shop fashion including clothing, shoes, jewelry, watches, bags and more
                             </p>
                         </div>
-                        <div className="deals flex items-center pt-4 md:pt-8">
+                        <div className="deals flex items-center pt-4 md:pt-8" ref={lastMinuteRef}>
                             <div className="slider_deals flex items-center">
-                                <div className="deal_img w-[4rem] h-[4rem] md:w-[6rem] md:h-[6rem]">
-                                    <img src="/assets/bag.png" alt="bag" className='w-[100%] h-[100%] object-contain' />
-                                </div>
-                                <div className="basic_text mx-1 md:mx-3">
-                                    <p className='text-[11px] font-semibold text-black py-1 md:text-[13px] dark:text-slate-200'>Top Backpack</p>
-                                    <p className='text-[9px] text-lightBlack md:text-[10px] dark:text-slate-400'>Big sale -30%</p>
-                                </div>
+                                <Deal deal={lastMinuteDeals[curr]} />
                             </div>
                             <div className="next_slide">
-                                <BiRightArrowCircle className='text-[1.1rem]' />
+                                <BiRightArrowCircle
+                                    onClick={handleNext}
+                                    className='text-[1.1rem] cursor-pointer'
+                                />
                             </div>
                         </div>
                     </div>
@@ -50,17 +75,14 @@ const LastMinuteDeals = () => {
                             </p>
                         </div>
                         <div className="deals flex items-center pt-4 md:pt-8">
-                            <div className="slider_deals flex items-center">
-                                <div className="deal_img w-[4rem] h-[4rem] md:w-[6rem] md:h-[6rem]">
-                                    <img src="/assets/bag.png" alt="bag" className='w-[100%] h-[100%] object-contain' />
-                                </div>
-                                <div className="basic_text mx-1 md:mx-3">
-                                    <p className='text-[11px] font-semibold text-black py-1 md:text-[13px] dark:text-slate-200'>Top Backpack</p>
-                                    <p className='text-[9px] text-lightBlack md:text-[10px] dark:text-slate-400'>Big sale -30%</p>
-                                </div>
+                           <div className="slider_deals flex items-center">
+                                <Deal deal={lastMinuteDeals[curr]} />
                             </div>
                             <div className="next_slide">
-                                <BiRightArrowCircle className='text-[1.1rem]' />
+                                <BiRightArrowCircle
+                                    onClick={handleNext}
+                                    className='text-[1.1rem] cursor-pointer'
+                                />
                             </div>
                         </div>
                     </div>

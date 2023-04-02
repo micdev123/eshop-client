@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { MdArrowDropDown, MdMyLocation } from 'react-icons/md';
 import { HiOutlineLightBulb } from 'react-icons/hi';
+import { Link } from 'react-router-dom';
 
 const TopNav = () => {
     // Toggle Theme Dropdown
@@ -88,9 +89,9 @@ const TopNav = () => {
                             )}
                         </li>
                     </div>
-                    <li className='mr-0 md:mr-3 lg:mr-0'>
+                    <Link to='/sell_on_e-shop' className='mr-0 md:ml-[2rem] lg:mr-0'>
                         <p className='dark:text-slate-400'>sell on e-shop</p>
-                    </li>
+                    </Link>
                     <li className='relative'>
                         {options?.map((opt) => (
                             theme === opt.text && (

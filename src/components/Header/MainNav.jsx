@@ -6,26 +6,27 @@ import { MdOutlineFavoriteBorder } from 'react-icons/md';
 import { AiOutlineUser } from 'react-icons/ai';
 import { BsCart4 } from 'react-icons/bs';
 import { FiBox } from 'react-icons/fi';
+import { Link } from 'react-router-dom';
 
 const MainNav = () => {
     const [menu, setMenu] = useState(false);
     return (
-        <div className='w-full flex items-center justify-between pt-2 pb-4 relative dark:text-slate-200'>
+        <div className='w-full flex items-center justify-between pt-1 pb-4 relative dark:text-slate-200'>
             <nav className="main_nav_left flex">
-                <div className='mr-[1.2rem]'>
+                <Link to='/' className='mr-[1.2rem]'>
                     <h2 className='font-bold text-[1rem] md:text-[1.1rem] lg:text-[1.2rem]'>e-shop.</h2>
-                </div>
+                </Link>
                 <ul className='hidden md:flex items-center'>
                     <li className='hidden md:flex md:items-center lg:mx-4'>
                         <CgMenuGridO className='hidden font-bold lg:flex' />
                         <p className='hidden lg:flex'> Shop Categories</p>
                     </li>
-                    <li className='mx-4'>
+                    <Link to='/allProducts' className='mx-4'>
                         <p>Products</p>
-                    </li>
-                    <li className='mx-4'>
+                    </Link>
+                    <Link to='/sell_on_e-shop' className='mx-4'>
                         <p>Sell on e-shop</p>
-                    </li>
+                    </Link>
                 </ul>
             </nav>
 
@@ -48,16 +49,16 @@ const MainNav = () => {
                     <li className='order-4 sm:order-none lg:mx-4'>
                         <FiBox  />
                     </li>
-                    <li className='order-2 sm:order-none lg:mx-4'>
+                    <Link to='/auth' className='order-2 sm:order-none lg:mx-4'>
                         <AiOutlineUser />
-                    </li>
+                    </Link>
                 </ul>
-                <div className='flex items-center relative'>
+                <Link to='/cart' className='flex items-center relative'>
                     <p className='text-[0.68rem] absolute bottom-[13.5px] left-[5px] font-bold text-red-800 lg:bottom-[23.5px] lg:text-[0.7rem] dark:text-amber-500'>0</p>
                     <BsCart4 className='font-[1.1rem]' />
                     <p className='w-[2px] h-[25px] bg-slate-900 mx-[5px] dark:bg-slate-200'></p>
                     <p className='text-[0.7rem] text-red-800 font-semibold dark:text-amber-500'>$0.00</p>
-                </div>
+                </Link>
                 <div className="menu_bar ml-3 lg:ml-0">
                     <CgMenuHotdog
                         onClick={(e) => setMenu(!menu)}

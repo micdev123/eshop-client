@@ -7,8 +7,8 @@ import FeaturedProduct from './FeaturedProduct'
 import ProductSlider from './ProductSlider'
 
 const HeaderBody = () => {
-    const autoSlide = false;
-    const autoSlideInterval = 5000
+    const autoSlide = true;
+    const autoSlideInterval = 14000
 
     // Slider state
     const [curr, setCurr] = useState(0);

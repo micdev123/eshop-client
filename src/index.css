@@ -34,9 +34,73 @@ body {
     transition: all 3s ease-in-out;
 } */
 
-.product:hover .the_icons {
+.product:hover .icons {
     display: block;
     transition: all 3s ease-in-out;
+}
+
+.collection, .top_seller, .recentViewed, .categories_container, .filter_list {
+    scrollbar-width: thin;
+    /* cursor: pointer; */
+}
+
+
+.fade-anim .slider_deals {
+  animation: fadeAnim 1s ease-out;
+}
+/* 
+.step {
+    width: 100%;
+}
+
+.step:not(:first-child)::before {
+    @apply content-[''] bg-slate-400 absolute w-full h-[1.5px] right-2/4 top-1/4 -translate-y-2/4
+}
+
+.active .step_circle {
+    @apply bg-slate-700 text-white font-medium
+}
+
+.active .step_text {
+    @apply text-slate-800
+}
+
+
+.complete .step_circle {
+    @apply bg-slate-900
+}
+
+.complete .step_text {
+    @apply text-slate-800 font-medium
+}
+
+.complete:not(:first-child)::before, 
+.active:not(:first-child)::before {
+    @apply bg-slate-900
+} */
+
+
+.active .head_title {
+    @apply text-slate-800
+}
+
+.active .desc {
+    @apply flex
+}
+
+
+/* .products_container {
+    display: grid;
+} */
+
+
+@keyframes fadeAnim {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 
