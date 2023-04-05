@@ -5,8 +5,8 @@ import { FcGoogle } from 'react-icons/fc'
 const Auth = () => {
     const [isSignUp, setIsSignup] = useState(false);
     return (
-        <div className='w-[33%] mx-auto p-8 my-8 bg-lighterBlue rounded-sm'>
-            <h2 className='text-center text-[16px] font-medium mb-5'>
+        <div className='w-[98%] mx-auto p-5 my-8 bg-lighterBlue rounded-sm sm:w-[55%] lg:w-[33%] md:p-8'>
+            <h2 className='text-center text-[15px] font-medium mb-5 md:text-[16px]'>
                 {isSignUp ? 'Create an account' : 'Login to your account'}
             </h2>
             <form action="" className='w-[100%] flex flex-col'>

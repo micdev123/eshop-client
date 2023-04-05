@@ -7,17 +7,17 @@ const Checkout = () => {
         <div className='my-4'>
             <h2 className='text-[12px] font-medium mb-5'>Checkout | Shipping address</h2>
         
-            <div className="container flex gap-7 bg-lighterBlue p-12 rounded-md my-3">
-                <div className="left w-[70%]">
-                    <h2 className='text-[16px] font-medium mb-4'>Choose a shipping address</h2>
+            <div className="container flex flex-col gap-7 bg-lighterBlue py-8 px-3 rounded-md my-3 md:flex-row md:py-12 md:px-12">
+                <div className="left w-[100%] md:w-[70%]">
+                    <h2 className='text-[15px] font-medium mb-4 md:text-[16px]'>Choose a shipping address</h2>
                     <div className="current_address flex items-center gap-2 mb-2">
                         <input type="radio" />
-                        <label htmlFor="" className='flex gap-2'>
-                            <h2 className='text-[13px] font-medium'>Michael L Bangura</h2>
-                            <p className='text-[13px]'>Mama Beach</p>
-                            <p className='text-[13px]'>Freetown</p>
-                            <p className='text-[13px]'>Sierra Leone...</p>
-                            <p className='text-[13px] text-amber-700 font-medium'>Edit address</p>
+                        <label htmlFor="" className='flex gap-1'>
+                            <h2 className='text-[13px] font-medium md:text-[13px]'>Michael L Bangura</h2>
+                            <p className='text-[12px] hidden md:text-[13px] md:block'>Mama Beach</p>
+                            <p className='text-[12px] hidden md:text-[13px] md:block'>Freetown</p>
+                            <p className='text-[12px] hidden md:text-[13px] md:block'>Sierra Leone...</p>
+                            <p className='text-[12px] text-amber-700 font-medium md:text-[13px]'>Edit address</p>
                         </label>
                     </div>
                     <button className='flex items-center gap-2 text-[12px] font-medium my-2'>
@@ -25,7 +25,7 @@ const Checkout = () => {
                         Add a new address
                     </button>
 
-                    <div className="new_address my-7 w-[60%]">
+                    <div className="new_address my-7 w-[100%] md:w-[60%]">
                         <div className="presonal_information">
                             <h2 className='text-[14px] font-medium mb-2'>Personal Information:</h2>
                             <div className="name flex flex-col my-3">
@@ -45,7 +45,7 @@ const Checkout = () => {
                         <div className="delivery_information mt-7">
                             <h2 className='text-[14px] font-medium mb-2'>Delivery Details:</h2>
                             <div className="container w-[100%]">
-                                <div className="form_group w-[100%] flex gap-2 my-3">
+                                <div className="form_group w-[100%] flex flex-col gap-2 my-3 md:flex-row">
                                     <div className="country w-[100%] flex flex-col">
                                         <label htmlFor="name" className='text-[12px] mb-2 font-medium'>Country | Region</label>
                                         <select name="" id="" className='text-[12px] p-2 rounded-md'>
@@ -58,7 +58,7 @@ const Checkout = () => {
                                         <input type="text" className='text-[12px] p-2 rounded-md' />
                                     </div>
                                 </div>
-                                <div className="form_group w-[100%] flex gap-2 my-3">
+                                <div className="form_group w-[100%] flex flex-col gap-2 my-3 md:flex-row">
                                     <div className="street w-[100%] flex flex-col">
                                         <label htmlFor="name" className='text-[12px] mb-2 font-medium'>Street</label>
                                         <input type="text" className='text-[12px] p-2 rounded-md' />
@@ -83,7 +83,7 @@ const Checkout = () => {
                     </div>
                 </div>
 
-                <div className="right w-[30%] bg-slate-200 p-4 rounded-md h-fit">
+                <div className="right w-[100%] bg-slate-200 p-4 rounded-md h-fit md:w-[30%]">
                     <h2 className='text-[14px] font-medium text-center mb-3'>Your Order Summary</h2>
                     <div className="content_container mt-3">
                         <div className="product_inCart flex items-center justify-between mb-3">

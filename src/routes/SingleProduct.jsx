@@ -21,8 +21,8 @@ const SingleProduct = () => {
             <div className="header my-4">
                 <p className='text-[13px] font-medium'>Home | Product_name</p>
             </div>
-            <div className="top bg-lighterBlue px-4 py-6 flex gap-5 items-start rounded-md">
-                <div className="left_product_img w-[50%]">
+            <div className="top bg-lighterBlue px-4 py-6 flex flex-col gap-5 items-start rounded-md md:flex-row">
+                <div className="left_product_img w-[100%] lg:w-[50%]">
                     <div className="current_img w-[100%] border rounded-md">
                         <img src="/assets/pp8.png" alt="" className='w-[100%] object-contain'/>
                     </div>
@@ -34,9 +34,9 @@ const SingleProduct = () => {
                         ))}
                     </div>
                 </div>
-                <div className="right_product_contents w-[80%]">
-                    <div className="right_container flex justify-between">
-                        <div className="product_content">
+                <div className="right_product_contents w-[100%] lg:w-[80%]">
+                    <div className="right_container w-[100%] flex justify-between gap-5">
+                        <div className="product_content w-[100%] lg:w-fit">
                             <div className="product_type mb-3">
                                 <p className='text-[12px] font-medium'>Wooden Chair</p>
                             </div>
@@ -93,12 +93,13 @@ const SingleProduct = () => {
                                     </div>
                                 </div>
                             </div>
-                            <div className="buttons items-center">
-                                <div className="flex gap-3 items-center mb-2">
-                                    <button className='bg-slate-800 text-white py-1 px-4 rounded-xl text-[12px] capitalize'>Add to cart</button>
-                                    <button className='bg-amber-800 text-white py-1 px-4 rounded-xl text-[12px] capitalize'>Buy now</button>
+                            <div className="buttons w-[100%]  items-center">
+                                <div className="flex flex-col-reverse gap-3 items-center mb-2 lg:flex-row">
+                                    <button className='w-[100%] bg-slate-800 text-white py-1.5 lg:w-fit lg:py-1 lg:px-4 rounded-xl text-[12px] capitalize'>Add to cart</button>
+
+                                    <button className='w-[100%] bg-amber-800 text-white py-1.5 lg:w-fit lg:py-1 lg:px-4 rounded-xl text-[12px] capitalize'>Buy now</button>
                                 </div>
-                                <div className="share_wishlist flex  gap-4 items-center">
+                                <div className="share_wishlist flex justify-center items-center gap-4 lg:justify-start">
                                     <p className='flex items-center text-[13px]'>
                                         <MdFavoriteBorder className='mr-1' />
                                         Add to wishlist
@@ -111,7 +112,7 @@ const SingleProduct = () => {
                                 
                             </div>
                         </div>
-                        <div className="right_seller_information border py-2 px-6 rounded-md">
+                        <div className="hidden right_seller_information border py-2 px-6 rounded-md lg:block">
                             <h2 className='font-semibold text-center text-[14px] mb-2'>Vendor Information</h2>
                             <div className="seller_container">
                                 <Link to='/vendor/1' className="">
@@ -177,14 +178,16 @@ const SingleProduct = () => {
                 </div>
             </div>
             <div className="bottom mt-3">
-                <div className="reviews bg-lighterBlue rounded-md py-5">
-                    <div className="container w-[90%] mx-auto">
-                        <div className="main_head flex items-center justify-between mb-7">
+                <div className="reviews bg-lighterBlue rounded-md py-4 lg:py-5">
+                    <div className="container_ w-[90%] mx-auto">
+                        <div className="main_head flex flex-col items-center justify-between mb-7 sm:flex-row">
                             <h2 className='text-[14px] font-medium'>Customer Reviews | Feedbacks</h2>
-                            <button className='text-[11px] border-2 border-slate-700 rounded-md py-0.5 px-4 outline-none'>Write a review</button>
+                            <button className='text-[11px] border-[1.8px] border-slate-700 rounded-md py-0.5 px-4 outline-none mt-2 lg:mt-0'>
+                                Write a review
+                            </button>
                         </div>
                          
-                        <div className="reviews_container px-5">
+                        <div className="reviews_container px-1 lg:px-5">
                             <div className="review mb-3">
                                 <div className="review_head flex items-end justify-between border-b-2 pb-1 mb-2">
                                     <div className="top flex items-center">
@@ -203,42 +206,9 @@ const SingleProduct = () => {
                                     </div>
                                     <p className='text-[12px] text-lightBlack'>4 months ago</p>
                                 </div>
-                                <div className="review_body px-3">
+                                <div className="review_body px-1 lg:px-3">
                                     <p className='text-[14px]'>Cool product.</p>
-                                    <div className="reply_btns flex items-center gap-3 justify-end mt-2">
-                                        <p className='flex items-center text-[12px]'>
-                                            <MdReply className='text-[14px] mr-1' />
-                                            Reply
-                                        </p>
-                                        <p className='flex items-center text-[12px]'>
-                                            <MdReport className='text-amber-700 text-[14px] mr-1' />
-                                            Report
-                                        </p>
-                                    </div>
-                                </div>
-                                <div className="reply_body"></div>
-                            </div>
-                            <div className="review">
-                                <div className="review_head flex items-end justify-between border-b-2 pb-1 mb-2">
-                                    <div className="top flex items-center">
-                                        <div className="reviewer_img w-[2rem] h-[2rem] mr-2">
-                                            <img src="/assets/user.png" alt="" className='w-[100%] object-contain' />
-                                        </div>
-                                        <div className="right">
-                                            <h2 className='reviewer_handle text-[12px] font-medium text-lightBlack'>Michael</h2>
-                                            <div className="rating flex items-center">
-                                                <AiFillStar className='text-ratingBg text-[0.7rem]' />
-                                                <AiFillStar className='text-ratingBg text-[0.7rem]' />
-                                                <AiFillStar className='text-ratingBg text-[0.7rem]' />
-                                                <AiFillStar className='text-ratingBg text-[0.7rem]' />
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <p className='text-[12px] text-lightBlack'>4 months ago</p>
-                                </div>
-                                <div className="review_body px-3">
-                                    <p className='text-[14px]'>Cool product.</p>
-                                    <div className="reply_btns flex items-center gap-3 justify-end mt-2">
+                                    <div className="reply_btns flex items-center gap-3 justify-start sm:justify-end mt-2">
                                         <p className='flex items-center text-[12px]'>
                                             <MdReply className='text-[14px] mr-1' />
                                             Reply

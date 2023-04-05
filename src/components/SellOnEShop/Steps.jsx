@@ -71,7 +71,7 @@ const Steps = ({ steps, currentStep }) => {
         return (
             <div
                 key={index}
-                className={`${index !== newStep.length - 1 ? "w-full flex items-center" : "flex items-center"}`}
+                className={`${index !== newStep.length - 1 ? "w-full flex items-center" : "flex items-center"} hidden sm:flex`}
             >
                 <div className={`step_content relative flex flex-col items-center`}>
                     <div className={`step_number w-7 h-7 rounded-full bg-slate-300 text-[12px] flex items-center justify-center ${step.selected && "bg-slate-700 text-white"}`}>

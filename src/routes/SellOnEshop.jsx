@@ -42,10 +42,10 @@ const SellOnEshop = () => {
     }
     return (
         <div className='mt-4'>
-            <h2 className='font-medium text-[16px] mb-2'>Vendor Registration</h2>
-            <div className="registration_container bg-lighterBlue py-11 px-[4rem] rounded-md">
+            <h2 className='font-medium text-[14.5px] mb-2 md:text-[16px]'>Vendor Registration</h2>
+            <div className="registration_container bg-lighterBlue py-7 px-[10px] rounded-md sm:py-11 sm:px-[1rem] md:px-[3rem]">
                 {/* Steps */}
-                <div className="steps w-[40%] mx-auto flex items-center justify-between mb-[5rem]">
+                <div className="steps flex w-[50%] mx-auto items-center justify-between sm:mb-[5rem] sm:w-[70%] md:w-[50%] lg:w-[40%]">
                     <Steps
                         steps={steps}
                         currentStep = {currentStep}
@@ -83,7 +83,7 @@ const SellOnEshop = () => {
                     )} */}
                 </div>
 
-                <div className="notes mt-[7rem] mb-3">
+                <div className="notes mt-[4rem] mb-3 md:mt-[7rem] sm:px-2 lg:px-6">
                     <SellOnEshopNotes />
                 </div>
             </div>
