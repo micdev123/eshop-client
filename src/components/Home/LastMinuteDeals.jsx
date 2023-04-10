@@ -41,7 +41,7 @@ const LastMinuteDeals = () => {
                 </div>
             </div>
             <div className="Deals flex items-center gap-2">
-                <div className="deal_type w-[100vw] bg-lighterOrange flex items-center px-3 md:pl-8 lg:pr-2 dark:bg-gray-700 dark:text-slate-200">
+                <div className="deal_type w-[100vw] bg-lighterOrange flex items-center px-3 rounded-md md:pl-8 lg:pr-2 dark:bg-gray-700 dark:text-slate-200">
                     <div className="left">
                         <div className="basic_text w-[11.5rem] pt-4 md:pt-8 md:w-[16rem]">
                             <h2 className='text-[1.1rem] font-semibold md:text-[1.3rem]'>Comfy styles for her</h2>
@@ -66,7 +66,7 @@ const LastMinuteDeals = () => {
                     </div>
                 </div>
 
-                 <div className="deal_type w-[100vw] bg-lighterBlue flex items-center px-3 md:pl-8 lg:pr-2 dark:bg-slate-800 dark:text-slate-200">
+                <div className="deal_type w-[100vw] bg-lighterBlue flex items-center px-3 rounded-md md:pl-8 lg:pr-2 dark:bg-slate-800 dark:text-slate-200">
                     <div className="left">
                         <div className="basic_text w-[11.5rem] pt-4 md:pt-8 md:w-[16rem]">
                             <h2 className='text-[1.1rem] font-semibold md:text-[1.3rem]'>Comfy styles for him</h2>

@@ -16,8 +16,8 @@ const ProductSlider = ({
         return () => clearInterval(slideInterval) // When carousal unmount
     }, [])
     return (
-        <div className='overflow-hidden'>
-            <div className="flex justify-between w-[100%] transition-transform ease-out duration-500" style={{ transform: `translateX(-${curr * 100}%)` }}>
+        <div className='min-w-[100%] overflow-hidden'>
+            <div className="flex justify-between min-w-[100%] transition-transform ease-out duration-500" style={{ transform: `translateX(-${curr * 100}%)` }}>
                 {filtered}                 
             </div>
             {/* <button onClick={next}>test</button> */}

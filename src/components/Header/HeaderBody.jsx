@@ -30,7 +30,7 @@ const HeaderBody = () => {
     // console.log(product);
     return (
         <div className='bg-lighterBlue w-full rounded-[5px] py-4 pl-4 flex flex-col sm:justify-center lg:items-center lg:justify-between sm:py-10 sm:px-8 lg:flex-row lg:my-4 lg:mb-[4rem]  relative overflow-hidden dark:bg-slate-800 dark:text-slate-200'>
-            <div className="dot_nav_btn hidden items-center justify-center sm:pr-8 lg:flex md:flex-col">
+            <div className="dot_nav_btn hidden items-center justify-center sm:pr-8 lg:flex lg:flex-col">
                 {categories?.map((_, i) => (
                     <BsDot onClick={() => setCurr(i)} className={`text-[1.5rem] p-[2px] my-3 transition-all cursor-pointer ${curr === i ? 'border-2 border-amber-600 border-solid rounded-full text-amber-600' : 'text-lightBlack dark:text-gray-200' }`} key={i} />
                 ))}
@@ -38,12 +38,12 @@ const HeaderBody = () => {
 
             <div className="slider_container w-[100%] flex overflow-hidden">
                 {categories?.map((collection) => (
-                    <div className="slider min-w-[100%] flex flex-col lg:items-center lg:flex-row transition-transform ease-out duration-500 relative overflow-hidden" style={{ transform: `translateX(-${curr * 100}%)` }} key={collection?.id}>
-                        <div className="left_header_body lg:w-[55%] z-0">
+                    <div className="slider min-w-[100%] flex flex-col justify-between md:items-center md:flex-row transition-transform ease-out duration-500 relative overflow-hidden" style={{ transform: `translateX(-${curr * 100}%)` }} key={collection?.id}>
+                        <div className="left_header_body md:min-w-[45%] z-0 lg:w-[55%]">
                             <FeaturedCategory category={collection} />
                         </div>
                         
-                        <div className='lg:overflow-hidden mb-[1rem] w-[100%] lg:w-[60%]'>
+                        <div className='lg:overflow-hidden mb-[1rem] w-[100%] md:min-w-[70%] lg:w-[60%]'>
                             <ProductSlider autoSlide={true}>
                                 {collectionProductSlider?.filter((product) => product.category === collection.category)
                                 .map(filtered => (
@@ -58,7 +58,7 @@ const HeaderBody = () => {
             
             <button
                 onClick={next}
-                className="next_nav_btn hidden sm:pl-2 md:flex md:pl-3 absolute right-10 lg:static lg:pr-4"
+                className="next_nav_btn hidden sm:pl-2 lg:flex md:pl-3 absolute right-10 lg:static lg:pr-4"
             >
                 <BsArrowRightCircle className='text-[1.2rem] font-thin text-gray-600 dark:text-gray-200' />
             </button>

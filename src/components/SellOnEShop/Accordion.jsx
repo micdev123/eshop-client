@@ -35,7 +35,7 @@ const Accordion = () => {
                 <div key={data?.id} className={`accordion my-3 ${accordion === index && ("active")}`}>
                     <div
                         onClick={() => [setAccordion(index), setDropQuestion(!dropQuestion)]}
-                        className="head_title flex items-center justify-between cursor-pointer text-zinc-500">
+                        className="head_title flex items-center justify-between cursor-pointer text-zinc-500 dark:text-zinc-400">
                         <h2 className='title text-[15.5px] font-medium'>
                             {data?.title}
                         </h2>

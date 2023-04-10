@@ -42,8 +42,10 @@ const SellOnEshop = () => {
     }
     return (
         <div className='mt-4'>
-            <h2 className='font-medium text-[14.5px] mb-2 md:text-[16px]'>Vendor Registration</h2>
-            <div className="registration_container bg-lighterBlue py-7 px-[10px] rounded-md sm:py-11 sm:px-[1rem] md:px-[3rem]">
+            <h2 className='font-medium text-[14.5px] mb-2 md:text-[16px] dark:text-slate-200'>
+                Vendor Registration
+            </h2>
+            <div className="registration_container bg-lighterBlue py-7 px-[10px] rounded-md sm:py-11 sm:px-[1rem] md:px-[3rem] dark:bg-slate-800">
                 {/* Steps */}
                 <div className="steps flex w-[50%] mx-auto items-center justify-between sm:mb-[5rem] sm:w-[70%] md:w-[50%] lg:w-[40%]">
                     <Steps
@@ -52,7 +54,7 @@ const SellOnEshop = () => {
                     />
                    
                 </div>
-                <div className="form flex flex-col justify-center items-center">
+                <div className="form flex flex-col justify-center items-center dark:text-slate-200">
                     <StepsContext.Provider value={{
                         stepData,
                         setStepData,

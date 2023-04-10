@@ -9,11 +9,11 @@ const Stars = ({ stars }) => {
         return (
             <span key={index}>
                 {stars >= index + 1 ? (
-                    <AiFillStar className='text-ratingBg text-[0.7rem]' />
+                    <AiFillStar className='text-ratingBg text-[0.6rem] md:text-[0.7rem]' />
                 ) : stars >= number ? (
-                    <FaStarHalfAlt className='text-ratingBg text-[0.7rem]' />
+                    <FaStarHalfAlt className='text-ratingBg text-[0.6rem] md:text-[0.7rem]' />
                 ) : (
-                    <AiOutlineStar className='text-ratingBg text-[0.7rem]' />
+                    <AiOutlineStar className='text-ratingBg text-[0.6rem] md:text-[0.7rem]' />
                 )
                 }
             </span>

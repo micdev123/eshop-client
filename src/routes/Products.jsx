@@ -10,10 +10,14 @@ import { Link } from 'react-router-dom';
 
 export const Products = () => {
     return (
-        <div className='products_container flex gap-10 my-3'>
-            <div className="left w-[16%]">
+        <div className='products_container flex gap-10 my-3 dark:text-slate-200'>
+            {/* All Filter Container */}
+            <div className="left w-[16%] hidden lg:block">
                 <h2 className='text-[18px] font-semibold mb-[2rem]'>Products</h2>
+                {/* Filter Container */}
                 <div className="filter_container w-[100%]">
+                    {/* Add category filter */}
+                    
                     {/* Vendors List Filter */}
                     <div className="vendors_list w-[100%]">
                         <h2 className='text-[14px] font-medium'>Vendors</h2>
@@ -137,17 +141,18 @@ export const Products = () => {
                             </div>
                         </div>
                     </div>
+                    {/* Price Filter */}
                     <div className="price w-[100%] my-4">
                         <h2 className='text-[14px] font-medium'>Price</h2>
                         <div className="filter_list w-[100%] flex items-center my-2">
                             <div className="list w-[100%]">
-                                <input type="text" className='rounded-md w-[100%] bg-zinc-200 border' />
+                                <input type="text" className='rounded-md w-[100%] bg-zinc-200 border dark:bg-slate-600 dark:border-slate-700' />
                             </div>
 
-                            <div className="range_line w-3 h-[1.75px] bg-slate-600 mx-2"></div>
+                            <div className="range_line w-3 h-[1.75px] bg-slate-600 mx-2 dark:bg-slate-200"></div>
 
                             <div className="list w-[100%]">
-                                <input type="text" className='rounded-md w-[100%] bg-zinc-200 border' />
+                                <input type="text" className='rounded-md w-[100%] bg-zinc-200 border dark:bg-slate-600 dark:border-slate-700' />
                             </div>
                         </div>
                     </div>
@@ -197,16 +202,25 @@ export const Products = () => {
                 </div>
             </div>
 
-            <div className="right w-[84%]">
+            {/* Products Container */}
+            <div className="right w-[100%] lg:w-[84%]">
+                {/* Showing The current category */}
                 <div className="current_category mt-[0.45rem]">
-                    <p className='text-[13.5px] font-medium mb-[2rem] text-zinc-600'>All Products |</p>
+                    {/* Current category */}
+                    <p className='text-[13.5px] font-medium mb-[1rem] text-zinc-600 md:mb-[2rem] dark:text-slate-300'>
+                        All Products |
+                    </p>
                 </div>
+                {/* Search Keywords, SortBy & Grid Display */}
                 <div className="search_keywords_sortBy_grid_display flex items-center justify-between mb-7">
+                    {/* Search Keywords */}
                     <div className="search_keywords flex items-center gap-4">
+                        {/* Info */}
                         <div className="info">
                             <p className='text-[11.5px] font-medium'>1-12 of 365 results</p>
                         </div>
-                        <div className="keywords flex gap-3 items-center">
+                        {/* Keywords */}
+                        <div className="keywords hidden md:flex gap-3 items-center">
                             <div className="keywords_container flex gap-3 items-center">
                                 <div className="keyword flex items-center bg-zinc-200 rounded-md text-[11px] font-medium py-1 px-2 text-zinc-600">
                                     <p>e-shop.com</p>
@@ -222,46 +236,56 @@ export const Products = () => {
                                     <GrFormClose className='text-[14px] ml-2' />
                                 </div>
                             </div>
+                            {/* Reset Button */}
                             <button className='text-[12px] py-[2px] px-2 border-2 border-zinc-400 bg-transparent rounded-md'>
                                 Reset
                             </button>
                         </div>
                     </div>
+                    {/* SortBy & Grid Display */}
                     <div className="sortBy_grid_display flex items-center gap-4">
+                        {/* SortBy */}
                         <div className="sortBy flex gap-2 items-center">
                             <label htmlFor="" className='text-[12.5px] font-medium'>Sort By :</label>
-                            <select name="" id="" className='text-[12px] py-1 pl-2 pr-4 rounded-sm bg-zinc-200'>
+                            <select name="" id="" className='text-[12px] py-1 pl-2 pr-4 rounded-sm bg-zinc-200 dark:bg-slate-700'>
                                 <option value="">Featured</option>
                                 <option value="">Best Selling</option>
                             </select>
                         </div>
-                        <div className="grid_display flex items-center gap-1">
-                            <div className="bg-gray-200 py-1 px-1 rounded-sm">
+                        {/* Grid Display */}
+                        <div className="grid_display hidden md:flex items-center gap-1">
+                            <div className="bg-gray-200 py-1 px-1 rounded-sm dark:bg-slate-700">
                                 <BsFillGridFill />
                             </div>
-                            <div className="bg-gray-200 py-1 px-1 rounded-sm">
+                            <div className="bg-gray-200 py-1 px-1 rounded-sm dark:bg-slate-700">
                                 <GoThreeBars />
                             </div>
                         </div>
                     </div>
                 </div>
+                {/* Products Result */}
                 <div className="products_result w-[100%]">
-                    <div className="products grid grid-cols-4 gap-3">
+                    <div className="products grid grid-cols-2 gap-2 gap-y-3 sm:grid-cols-3 md:grid-cols-4 sm:gap-3">
                         {products.slice(0, 12).map((product) => (
                             <Product product={product} key={product?.id} />
                         ))}
                     </div>
                     
-                    <div className="pagination w-[100%] bg-lighterBlue py-2 px-3 rounded-sm flex justify-between items-center mt-2">
-                        <p className='bg-zinc-200 py-1.5 px-3 text-[11px] font-medium rounded-sm'>Showing 12 of 21</p>
+                    {/* Pagination */}
+                    <div className="pagination w-[100%] bg-lighterBlue py-2 px-3 rounded-sm flex justify-between items-center mt-2 dark:bg-slate-800 dark:text-slate-200">
+                        {/* Info */}
+                        <p className='bg-zinc-200 py-1.5 px-3 text-[10px] font-medium rounded-sm dark:bg-slate-700'>
+                            Showing 12 of 21
+                        </p>
+                        {/* Pagination Button */}
                         <div className="pagination_container flex gap-2 items-center justify-center">
-                            <div className="w-[1.4rem] h-[1.4rem] bg-slate-700 rounded-full text-white flex justify-center items-center">
+                            <div className="w-[1.3rem] h-[1.3rem] bg-slate-700 rounded-full text-white flex justify-center items-center dark:bg-sky-800">
                                <p className='text-[10px] font-semibold'>1</p>
                             </div>
-                            <div className="w-[1.4rem] h-[1.4rem] bg-slate-700 rounded-full text-white flex justify-center items-center">
+                            <div className="w-[1.3rem] h-[1.3rem] bg-slate-700 rounded-full text-white flex justify-center items-center dark:bg-sky-800">
                                 <p className='text-[10px] font-semibold'>2</p>
                             </div>
-                            <div className="w-[1.4rem] h-[1.4rem] bg-slate-300 rounded-full flex justify-center items-center">
+                            <div className="w-[1.3rem] h-[1.3rem] bg-slate-300 rounded-full flex justify-center items-center">
                                 <GrFormNext className='text-[15px] font-semibold text-white' />
                             </div>
                         </div>

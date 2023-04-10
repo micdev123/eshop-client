@@ -74,10 +74,10 @@ const Steps = ({ steps, currentStep }) => {
                 className={`${index !== newStep.length - 1 ? "w-full flex items-center" : "flex items-center"} hidden sm:flex`}
             >
                 <div className={`step_content relative flex flex-col items-center`}>
-                    <div className={`step_number w-7 h-7 rounded-full bg-slate-300 text-[12px] flex items-center justify-center ${step.selected && "bg-slate-700 text-white"}`}>
+                    <div className={`step_number w-7 h-7 rounded-full bg-slate-300 text-[12px] flex items-center justify-center  ${step.selected && "bg-slate-700 text-white "}`}>
                         {step.completed ? <BsCheckLg /> : index + 1}
                     </div>
-                    <div className={`step_description absolute top-0  text-center text-[12.5px] text-slate-400 mt-9 w-32 ${step.selected && 'text-slate-800 font-medium'}`}>
+                    <div className={`step_description absolute top-0  text-center text-[12.5px] text-slate-400 mt-9 w-32 ${step.selected && 'text-slate-800 font-medium dark:text-slate-200 '}`}>
                         {step?.description}
                     </div>
                 </div>

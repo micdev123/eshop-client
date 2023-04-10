@@ -36,9 +36,9 @@ const Categories = () => {
                 {categories.map((category) => {
                     const { id, photo, collection_name } = category;
                     return (
-                        <div key={id} className="category bg-lighterBlue w-[100%] min-h-[17rem] dark:bg-slate-800 dark:text-slate-200 md:min-h-[20rem]">
-                            <div className="overflow-hidden w-[44vw] h-[19rem] md:w-[100%] ">
-                                <div className="category_img w-[9rem]  h-[15rem] sm:w-[40vw] md:w-[30vw] lg:w-[100%] lg:h-[16rem]">
+                        <div key={id} className="category bg-lighterBlue w-[100%] min-h-[17rem] rounded-md dark:bg-slate-800 dark:text-slate-200 md:min-h-[20rem]">
+                            <div className="overflow-hidden w-[54vw] h-[19rem] sm:w-[28vw] md:w-[20vw] lg:w-[21vw] ">
+                                <div className="category_img w-[50vw]  h-[15rem] sm:w-[28vw] md:w-[20vw] md:h-[90%] lg:w-[100%] lg:h-[16rem]">
                                     <img src={photo} alt={collection_name} className="w-[100%] h-[90%] object-cover relative right-[-1rem] lg:right-[-5rem] lg:top-[1rem] lg:object-contain"/>
                                 </div>
                                 <h1 className='font-semibold text-[13px] py-4 px-4 lg:px-10'>{collection_name}</h1>

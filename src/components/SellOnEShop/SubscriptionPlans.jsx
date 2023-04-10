@@ -32,7 +32,7 @@ const SubscriptionPlans = () => {
                     return (
                         <div
                             onClick={() => setIsSelected(index)}
-                            key={id} className={`plan bg-zinc-50 p-4 rounded-md drop-shadow-sm border mb-3 cursor-pointer w-[100%] ${isSelected === index && ('border-2 border-sky-500')}`}>
+                            key={id} className={`plan bg-zinc-50 p-4 rounded-md drop-shadow-sm border mb-3 cursor-pointer w-[100%] dark:bg-gray-800 dark:border-slate-700 ${isSelected === index && ('border-2 border-sky-500')}`}>
                             <h2 className='text-[14px] font-medium text-center mb-5 md:text-[15px]'>
                                 {duration} {Number(duration) === 1 ? 'Month' : 'Months'}
                             </h2>

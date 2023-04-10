@@ -2,10 +2,10 @@ import React from 'react'
 
 const SellOnEshopNotes = () => {
     return (
-        <div>
+        <div className='dark:text-slate-200'>
             <h2 className='font-medium text-[14.5px] w-[16rem] mb-2 md:text-[17px]'>Here are ways to set yourself for success</h2>
             <div className="notes_container grid grid-cols-1 gap-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-                <div className="note bg-lighterOrange p-6 rounded-md">
+                <div className="note bg-lighterOrange p-6 rounded-md dark:bg-orange-900">
                     <h2 className='text-[13.5px] font-medium mb-2 md:text-[15px]'>Write a standout title</h2>
                     <ul className='list-disc'>
                         <li className='text-[11.5px] mb-2 md:text-[12px]'>
@@ -17,7 +17,7 @@ const SellOnEshopNotes = () => {
                     </ul>
                 </div>
 
-                <div className="note bg-slate-200 p-6 rounded-md">
+                <div className="note bg-slate-200 p-6 rounded-md dark:bg-slate-700">
                     <h2 className='text-[13.5px] font-medium mb-2 md:text-[15px]'>
                         Take excellent pictures
                     </h2>
@@ -29,7 +29,7 @@ const SellOnEshopNotes = () => {
                     </ul>
                 </div>
 
-                <div className="note bg-amber-200 p-6 rounded-md">
+                <div className="note bg-amber-200 p-6 rounded-md dark:bg-amber-900">
                     <h2 className='text-[13.5px] font-medium mb-2 md:text-[15px]'>
                         Decide on a fair amount.
                     </h2>
@@ -43,7 +43,7 @@ const SellOnEshopNotes = () => {
                     </ul>
                 </div>
 
-                <div className="note bg-gray-200 p-6 rounded-md">
+                <div className="note bg-gray-200 p-6 rounded-md dark:bg-gray-900">
                     <h2 className='text-[13.5px] font-medium mb-2 md:text-[15px]'>
                         Ship effortlessly
                     </h2>
