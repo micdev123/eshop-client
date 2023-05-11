@@ -49,7 +49,7 @@ const MainNav = () => {
                     <li className='order-4 sm:order-none lg:mx-4'>
                         <FiBox  />
                     </li>
-                    <Link to='/auth' className='order-2 sm:order-none lg:mx-4'>
+                    <Link to='/loginAuth' className='order-2 sm:order-none lg:mx-4'>
                         <AiOutlineUser />
                     </Link>
                 </ul>

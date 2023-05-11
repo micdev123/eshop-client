@@ -1,7 +1,7 @@
 import React from 'react'
 import { AiFillStar } from 'react-icons/ai'
 import { BiCurrentLocation, BiMinus } from 'react-icons/bi'
-import { BsHandbag, BsPaypal, BsPlus } from 'react-icons/bs'
+import { BsHandbag, BsPlus } from 'react-icons/bs'
 import { FaHandPointDown } from 'react-icons/fa'
 import { MdCall, MdFavoriteBorder, MdOutlineFavoriteBorder, MdReply, MdReport, MdShare } from 'react-icons/md'
 import { FiArrowLeftCircle, FiArrowRightCircle } from 'react-icons/fi'
