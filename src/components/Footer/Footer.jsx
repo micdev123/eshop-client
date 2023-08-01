@@ -1,13 +1,19 @@
 import React from 'react'
+import { AiFillInstagram } from 'react-icons/ai'
 import { BsTwitter } from 'react-icons/bs'
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
 import { SiUpwork } from 'react-icons/si'
+import { useLocation } from 'react-router-dom'
 
 const Footer = () => {
-    return (
+    const { pathname } = useLocation();
+
+    const isLoginOrRegisterPage = pathname === '/loginAuth' || pathname === '/registerAuth';
+    
+    return !isLoginOrRegisterPage && (
         <section className='footer mt-5'>
             {/* NewLetter Container */}
-            <div className="top_newsletter  bg-slate-100 mb-2 rounded-md py-10 dark:bg-slate-600 dark:text-slate-200">
+            <div className="top_newsletter  bg-slate-100 mb-2 rounded-md py-10 dark:bg-zinc-600 dark:text-slate-200">
                 {/* NewLetter Content Container */}
                 <div className="w-[90%] mx-auto flex items-center justify-between md:w-[80%]">
                     <div className="content">
@@ -35,7 +41,7 @@ const Footer = () => {
             </div>
 
             {/* Footer Middle Container */}
-            <div className="middle bg-lighterOrange mb-2 py-6 rounded-md dark:bg-gray-700 dark:text-slate-200">
+            <div className="middle bg-lighterOrange mb-2 py-6 rounded-md dark:bg-zinc-700 dark:text-slate-200">
                 {/* Links Container */}
                 <div className="top_contents w-[90%] mx-auto grid grid-cols-2 gap-3 md:w-[80%] sm:flex items-start justify-between">
                     {/* Links */}
@@ -83,7 +89,7 @@ const Footer = () => {
             </div>
 
             {/* Footer Bottom Container */}
-            <div className="bottom bg-lighterBlue mb-8 sm:mb-0 rounded-md dark:bg-slate-800 dark:text-slate-200">
+            <div className="bottom bg-lighterBlue mb-8 sm:mb-0 rounded-md dark:bg-zinc-800 dark:text-slate-200">
                 <div className="bottom_content w-[90%] mx-auto flex items-center justify-between py-4 md:w-[80%]">
                     {/* Social Links */}
                     <div className="left flex">
@@ -91,6 +97,7 @@ const Footer = () => {
                         <FaLinkedin className='text-[1rem] mr-[10px] sm:mx-2' />
                         <SiUpwork className='text-[1rem] mr-[10px] sm:mx-2' />
                         <BsTwitter className='text-[1rem] mr-[10px] sm:mx-2' />
+                        <AiFillInstagram className='text-[1rem] mr-[10px] sm:mx-2' />
                     </div>
                     {/* CopyRight */}
                     <div className="right">

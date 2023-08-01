@@ -29,13 +29,15 @@ const HeaderBody = () => {
     
     // console.log(product);
     return (
-        <div className='bg-lighterBlue w-full rounded-[5px] py-4 pl-4 flex flex-col sm:justify-center lg:items-center lg:justify-between sm:py-10 sm:px-8 lg:flex-row lg:my-4 lg:mb-[4rem]  relative overflow-hidden dark:bg-slate-800 dark:text-slate-200'>
+        <div className='bg-lighterBlue w-full rounded-[5px] py-4 pl-4 flex flex-col sm:justify-center lg:items-center lg:justify-between sm:py-10 sm:px-8 lg:flex-row lg:my-4 lg:mb-[4rem]  relative overflow-hidden dark:bg-zinc-800 dark:text-slate-200'>
+            {/* Dot Navigators */}
             <div className="dot_nav_btn hidden items-center justify-center sm:pr-8 lg:flex lg:flex-col">
                 {categories?.map((_, i) => (
                     <BsDot onClick={() => setCurr(i)} className={`text-[1.5rem] p-[2px] my-3 transition-all cursor-pointer ${curr === i ? 'border-2 border-amber-600 border-solid rounded-full text-amber-600' : 'text-lightBlack dark:text-gray-200' }`} key={i} />
                 ))}
             </div>
 
+            {/* Slider Container */}
             <div className="slider_container w-[100%] flex overflow-hidden">
                 {categories?.map((collection) => (
                     <div className="slider min-w-[100%] flex flex-col justify-between md:items-center md:flex-row transition-transform ease-out duration-500 relative overflow-hidden" style={{ transform: `translateX(-${curr * 100}%)` }} key={collection?.id}>
@@ -63,6 +65,7 @@ const HeaderBody = () => {
                 <BsArrowRightCircle className='text-[1.2rem] font-thin text-gray-600 dark:text-gray-200' />
             </button>
 
+            {/* Small Screens */}
             <div className="dot_nav_btn w-full flex items-center justify-center my-2 lg:my-0 lg:pr-8  lg:hidden">
                 {categories?.map((_, i) => (
                     <BsDot onClick={() => setCurr(i)} className={`text-[1.5rem] p-[2px] my-3 transition-all cursor-pointer ${curr === i ? 'border-2 border-amber-600 border-solid rounded-full text-amber-600' : 'text-lightBlack' }`} key={i} />

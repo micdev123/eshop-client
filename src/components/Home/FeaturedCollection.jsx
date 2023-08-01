@@ -33,8 +33,8 @@ const FeaturedCollection = () => {
 
     if (!featuredProducts || !featuredProducts.length) return null;
     return (
-        <section className='w-[100%] my-7'>
-            <div className="collection_header flex items-center justify-between mb-[5px] dark:text-slate-200">
+        <section className='w-[100%] my-[3rem]'>
+            <div className="collection_header flex items-center justify-between mb-[10px] dark:text-slate-200">
                 <h2 className='text-[14px] font-medium text-black lg:text-[15px] dark:text-slate-200'>Featured Collection</h2>
                 {/* <div className="navigation flex items-center">
                     <BiLeftArrowCircle

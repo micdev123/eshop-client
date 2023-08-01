@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;500;600&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -7,6 +9,11 @@
 
 body {
     background-color: #FAFAFA;
+    scrollbar-width: none;
+}
+
+.logo {
+    font-family: 'Montserrat Alternates', sans-serif;
 }
 
 .top_right li {
@@ -15,24 +22,16 @@ body {
 }
 
 .top_right p {
-    font-size: 0.7rem;
+    font-size: 0.6rem;
     color: #808080;
 }
 
 
 
 .main_nav_left p {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     font-weight: 500;
 }
-
-/* .product {
-    transition: all 3s ease-in-out;
-}
-
-.the_icons {
-    transition: all 3s ease-in-out;
-} */
 
 .product:hover .icons {
     display: block;
@@ -40,7 +39,7 @@ body {
 }
 
 .collection, .top_seller, .recentViewed, .categories_container, .filter_list {
-    scrollbar-width: thin;
+    scrollbar-width: none;
     /* cursor: pointer; */
 }
 
@@ -48,37 +47,6 @@ body {
 .fade-anim .slider_deals {
   animation: fadeAnim 1s ease-out;
 }
-/* 
-.step {
-    width: 100%;
-}
-
-.step:not(:first-child)::before {
-    @apply content-[''] bg-slate-400 absolute w-full h-[1.5px] right-2/4 top-1/4 -translate-y-2/4
-}
-
-.active .step_circle {
-    @apply bg-slate-700 text-white font-medium
-}
-
-.active .step_text {
-    @apply text-slate-800
-}
-
-
-.complete .step_circle {
-    @apply bg-slate-900
-}
-
-.complete .step_text {
-    @apply text-slate-800 font-medium
-}
-
-.complete:not(:first-child)::before, 
-.active:not(:first-child)::before {
-    @apply bg-slate-900
-} */
-
 
 .active .head_title {
     @apply text-slate-800
@@ -86,6 +54,21 @@ body {
 
 .active .desc {
     @apply flex
+}
+
+.agreement_container li, .policy_container li, .vendor_policy_container li {
+    list-style-type: disc;
+    margin: 10px 0 10px 2rem;
+    font-size: 14px;
+
+}
+
+.policy_container span {
+    @apply font-medium text-[14px];
+}
+
+.policy_container .logo {
+    @apply font-semibold text-[15px];
 }
 
 

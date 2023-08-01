@@ -30,8 +30,8 @@ const TopSellers = () => {
 
     if (!topSellingProducts || !topSellingProducts.length) return null;
     return (
-        <section className='my-7'>
-            <div className="top_seller_header flex items-center justify-between mb-[5px] dark:text-slate-200">
+        <section className='my-[3rem]'>
+            <div className="top_seller_header flex items-center justify-between mb-[10px] dark:text-slate-200">
                 <h2 className='text-[14px] font-medium text-black lg:text-[15px] dark:text-slate-200'>e-shop Top Sellers</h2>
                 {/* <div className="navigation flex items-center">
                     <BiLeftArrowCircle

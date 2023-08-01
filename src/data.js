@@ -377,20 +377,48 @@ export const products = [
     
 ];
 
+export const dealTypes = [
+    {
+        id: 1,
+        dealFor: 'her',
+        desc: `Shop e-shop fashion including clothing, shoes, jewelry, watches, bags and more`,
+        img: '/assets/her.png'
+    },
+    {
+        id: 2,
+        dealFor: 'him',
+        desc: `Shop e-shop fashion including clothing, shoes, jewelry, watches, bags and more`,
+        img: '/assets/him.png'
+    }
+]
+
 export const lastMinuteDeals = [
     {
+        id: 1,
         deal_img: '/assets/bag.png',
         deal_name: 'Top Backpacks',
-        deal_percent: 30
+        deal_percent: 30,
+        dealType: 'both'
     },
     {
+        id: 2,
         deal_img: '/assets/pp17.png',
         deal_name: 'Smart Devices',
-        deal_percent: 30
+        deal_percent: 30,
+        dealType: 'him'
     },
     {
+        id: 3,
         deal_img: '/assets/pp9.png',
         deal_name: 'Household Deals',
-        deal_percent: 30
+        deal_percent: 30,
+        dealType: 'her'
+    },
+    {
+        id: 4,
+        deal_img: '/assets/pp14.png',
+        deal_name: 'Clear Glass Bottle With Yellow Liquid',
+        deal_percent: 30,
+        dealType: 'her'
     }
 ];

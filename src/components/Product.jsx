@@ -8,7 +8,7 @@ import Stars from './Stars'
 const Product = ({ product }) => {
     const { id, product_name, product_img, reviews, product_price_original, product_price_discount, category, brand, tag, rating } = product;
     return (
-        <Link to={`/product/${1}`} key={id} className="product bg-lighterBlue py-4 relative rounded-md dark:bg-slate-800 dark:text-slate-200 transition-transform ease-out duration-500">
+        <Link to={`/product/${1}`} key={id} className="product bg-lighterBlue py-4 relative rounded-md dark:bg-zinc-800 dark:text-slate-200 transition-transform ease-out duration-500">
             <div className="percent_discount_best_seller hidden items-center mb-2 px-3 md:flex">
                 {product_price_discount && (
                     <p className='text-[9px] font-semibold bg-amber-500 text-white py-1 px-2 rounded-[10px] mr-2'>{Math.floor((product_price_original - product_price_discount) / product_price_original * 100)}%</p>

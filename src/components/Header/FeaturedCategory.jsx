@@ -8,7 +8,7 @@ const FeaturedCategory = ({ category }) => {
                 <p className='w-[65%] text-[9.8px] leading-[15px] text-black font-normal my-2 sm:w-full sm:text-[14px] sm:leading-[20px]  sm:my-4 dark:text-slate-200'>
                     {category?.desc}
                 </p>
-                <button className='border-2 border-black border-solid rounded-[8px] text-[10px] font-medium py-[2px] px-[8px] sm:text-[12px] sm:py-[3px] sm:px-[10px] dark:text-slate-200 dark:border-white'>view more</button>
+                <button className='border-[1px] border-black border-solid rounded-[5px] text-[10px] font-medium py-[2px] px-[10px] sm:text-[12px] sm:py-[3px] sm:px-[10px] dark:text-slate-200 dark:border-white'>view more</button>
             </div> 
         </>
     )

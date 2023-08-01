@@ -37,8 +37,8 @@ const YourSearchHistory = () => {
 
     if (!recentViewedProducts || !recentViewedProducts.length) return null;
     return (
-        <section className='mt-7 mb-4'>
-            <div className="your_search_history_header flex items-center justify-between mb-[5px] dark:text-slate-200">
+        <section className='my-[3rem] mb-4'>
+            <div className="your_search_history_header flex items-center justify-between mb-[10px] dark:text-slate-200">
                 <h2 className='flex items-center text-[14px] font-medium text-black lg:text-[15px] dark:text-slate-200'>
                     Guest, your recently viewed
                     <FaHandPointDown className='text-amber-500 ml-2' />
@@ -54,8 +54,8 @@ const YourSearchHistory = () => {
                     />
                 </div>
             </div>
-            <div className="recentViewed flex gap-2 overflow-auto scrollbar scrollbar-thumb-slate-800 scrollbar-track-slate-400 scrollbar-w-[2px] scrollbar-h-[5px] scrollbar-track-rounded-md scrollbar-thumb-rounded-md scroll-smooth cursor-pointer" ref={recentViewed}>
-                <Link to={`/product/${1}`} className="product bg-lighterBlue py-4 relative rounded-md dark:bg-slate-800 dark:text-slate-200 transition-transform ease-out duration-500">
+            <div className="recentViewed flex gap-2 overflow-auto scrollbar scrollbar-thumb-slate-800 scrollbar-track-slate-400 scrollbar-w-[2px] scrollbar-h-[3px] scrollbar-track-rounded-md scrollbar-thumb-rounded-md scroll-smooth cursor-pointer pb-1" ref={recentViewed}>
+                <Link to={`/product/${1}`} className="product bg-lighterBlue py-4 relative rounded-md dark:bg-zinc-800 dark:text-slate-200 transition-transform ease-out duration-500">
                     <div className="percent_discount_best_seller hidden items-center mb-2 px-3 md:flex">
                         <p className='text-[9px] font-semibold bg-amber-500 text-white py-1 px-2 rounded-[10px] mr-2'>
                             30%
@@ -103,7 +103,7 @@ const YourSearchHistory = () => {
                     </div>
                 </Link>
 
-                <Link to={`/product/${1}`} className="product bg-lighterBlue py-4 relative rounded-md dark:bg-slate-800 dark:text-slate-200 transition-transform ease-out duration-500">
+                <Link to={`/product/${1}`} className="product bg-lighterBlue py-4 relative rounded-md dark:bg-zinc-800 dark:text-slate-200 transition-transform ease-out duration-500">
                     <div className="percent_discount_best_seller hidden items-center mb-2 px-3 md:flex">
                         <p className='text-[9px] font-semibold bg-amber-500 text-white py-1 px-2 rounded-[10px] mr-2'>
                             30%
@@ -151,7 +151,7 @@ const YourSearchHistory = () => {
                     </div>
                 </Link>
 
-                <Link to={`/product/${1}`} className="product bg-lighterBlue py-4 relative rounded-md dark:bg-slate-800 dark:text-slate-200 transition-transform ease-out duration-500">
+                <Link to={`/product/${1}`} className="product bg-lighterBlue py-4 relative rounded-md dark:bg-zinc-800 dark:text-slate-200 transition-transform ease-out duration-500">
                     <div className="percent_discount_best_seller hidden items-center mb-2 px-3 md:flex">
                         <p className='text-[9px] font-semibold bg-amber-500 text-white py-1 px-2 rounded-[10px] mr-2'>
                             30%
@@ -199,7 +199,7 @@ const YourSearchHistory = () => {
                     </div>
                 </Link>
 
-                <Link to={`/product/${1}`} className="product bg-lighterBlue py-4 relative rounded-md dark:bg-slate-800 dark:text-slate-200 transition-transform ease-out duration-500">
+                <Link to={`/product/${1}`} className="product bg-lighterBlue py-4 relative rounded-md dark:bg-zinc-800 dark:text-slate-200 transition-transform ease-out duration-500">
                     <div className="percent_discount_best_seller hidden items-center mb-2 px-3 md:flex">
                         <p className='text-[9px] font-semibold bg-amber-500 text-white py-1 px-2 rounded-[10px] mr-2'>
                             30%
@@ -247,7 +247,7 @@ const YourSearchHistory = () => {
                     </div>
                 </Link>
 
-                <Link to={`/product/${1}`} className="product bg-lighterBlue py-4 relative rounded-md dark:bg-slate-800 dark:text-slate-200 transition-transform ease-out duration-500">
+                <Link to={`/product/${1}`} className="product bg-lighterBlue py-4 relative rounded-md dark:bg-zinc-800 dark:text-slate-200 transition-transform ease-out duration-500">
                     <div className="percent_discount_best_seller hidden items-center mb-2 px-3 md:flex">
                         <p className='text-[9px] font-semibold bg-amber-500 text-white py-1 px-2 rounded-[10px] mr-2'>
                             30%
@@ -295,7 +295,7 @@ const YourSearchHistory = () => {
                     </div>
                 </Link>
 
-                <Link to={`/product/${1}`} className="product bg-lighterBlue py-4 relative rounded-md dark:bg-slate-800 dark:text-slate-200 transition-transform ease-out duration-500">
+                <Link to={`/product/${1}`} className="product bg-lighterBlue py-4 relative rounded-md dark:bg-zinc-800 dark:text-slate-200 transition-transform ease-out duration-500">
                     <div className="percent_discount_best_seller hidden items-center mb-2 px-3 md:flex">
                         <p className='text-[9px] font-semibold bg-amber-500 text-white py-1 px-2 rounded-[10px] mr-2'>
                             30%

@@ -1,30 +1,27 @@
 import React, { useEffect, useState } from 'react'
 import { MdCelebration } from 'react-icons/md'
-import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate, useParams, useSearchParams } from 'react-router-dom'
 import { API_Request } from '../requestController';
-import { updateAuth } from '../redux/slices/auth/authSlice';
 import HashLoader  from "react-spinners/HashLoader ";
 
 export const EmailVerified = () => {
-    const user = useSelector((state) => state.auth.user);
-    console.log(user);
+    // console.log(user);
     const [searchParams] = useSearchParams();
     const [error, setError] = useState(false);
     const navigate = useNavigate();
 
     const params = useParams();
     const { emailToken } = params;
-    console.log(emailToken);
+    // console.log(emailToken);
     
-    const dispatch = useDispatch();
 
+    
     useEffect(() => {
         const verifyEmail = async () => {
             if (user.isVerified) {
                 setTimeout(() => {
                     navigate("/")
-                }, 5000)
+                }, 3000)
             }
             else if (emailToken) {
                 const { data } = await API_Request.post(`/auth/verify-email/${emailToken}`);
@@ -41,7 +38,7 @@ export const EmailVerified = () => {
 
     return (
         <div className='flex h-[30vh] justify-center items-center flex-col'>
-            {/* {user?.isVerified ? ( */}
+            {/* {user?.isVerified ? (
                 <>
                     <MdCelebration className='text-[3rem] text-green-600' />
                     <div className='flex items-center'>
@@ -51,12 +48,11 @@ export const EmailVerified = () => {
                         <HashLoader color="#2688a7" size="20" />
                     </div>
                 </>
-            {/* ) : ( */}
+            ) : (
                     <div>
-                        hey
-                    {/* {error.error && <div>{error.message} hey</div>} */}
+                    {error.error && <div>{error.message}</div>}
                 </div>
-            {/* )} */}
+            )} */}
         </div>
     )
     

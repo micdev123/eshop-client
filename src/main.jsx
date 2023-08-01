@@ -2,14 +2,16 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App'
 import './index.css'
-import store from './redux/Store' // Getting access to the store fnx
-import { Provider } from 'react-redux'
+import { GoogleOAuthProvider } from '@react-oauth/google';
+import { HelmetProvider } from 'react-helmet-async';
+
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    {/* Now redux can be used through out the application for managing the state of the application */}
-    <Provider store={store}>
-      <App />
-    </Provider>
+    <GoogleOAuthProvider clientId={import.meta.env.VITE_GOOGLE_CLIENT_ID} >
+      <HelmetProvider>
+        <App />
+      </HelmetProvider>
+    </GoogleOAuthProvider>
   </React.StrictMode>,
 )
