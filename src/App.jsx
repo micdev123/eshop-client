@@ -5,7 +5,6 @@ import Home from './routes/Home'
 import MainNav from './components/Header/MainNav';
 import Footer from './components/Footer/Footer';
 import SingleProduct from './routes/SingleProduct';
-import SellOnEshop from './routes/SellOnEshop';
 import { Products } from './routes/Products';
 import Vendor from './routes/Vendor';
 import Cart from './routes/Cart';
@@ -19,8 +18,8 @@ import { useGeoLocationStore } from './Store/GeoData/geoLocationStore';
 import useAuthStore from './Store/Auth/authStore';
 import axios from 'axios';
 import AccountVerified from './components/AccountVerified';
-import UserAgreement from './routes/Agreements/UserAgreement';
-import PrivacyPolicy from './routes/Agreements/PrivacyPolicy';
+import SellerOnbording from './routes/SellerOnbording';
+import Category from './routes/Category';
 // import { Confirmation } from './components/Mailer';
 
 const App = () => {
@@ -52,13 +51,13 @@ const App = () => {
   // When page mount get GeoLocation data [country_name, country] and save it in the useGeoLocation store state.
   useEffect(() => {
     const getGeoInfo = async () => {
-        try {
+      try {
         const { data } = await axios.get(import.meta.env.VITE_GEOLOCATION);
-        setGeoData([data.country_name, data.country]); // country name and country currency
+        setGeoData([data.country_name, data.city, data.country_calling_code, data.country]); // country name and country currency
         // console.log(data);
-        } catch (error) {
-            console.log(error);
-        }
+      } catch (error) {
+          console.log(error);
+      }
     };
     getGeoInfo();
   }, []);
@@ -95,7 +94,7 @@ const App = () => {
           <MainNav />
         </header>
         {/* Main */}
-        <main className='main w-[92%] mx-auto xl:w-[85%] overflow-hidden'>
+        <main className='main w-[92%] mx-auto xl:w-[85%] overflow-hidden z-30'>
           <Routes>
             <Route
               exact path='/'
@@ -108,6 +107,10 @@ const App = () => {
               element={<SingleProduct />}
             />
             <Route
+              path="/category/:slug"
+              element={<Category />}
+            />
+            <Route
               path="/loginAuth"
               element={<LoginAuth />}
             />
@@ -116,16 +119,8 @@ const App = () => {
               element={<RegisterAuth />}
             />
             <Route
-              path="/help/userAgreement"
-              element={<UserAgreement />}
-            />
-            <Route
-              path="/help/privacyPolicy"
-              element={<PrivacyPolicy />}
-            />
-            <Route
               path="/sell_on_e-shop"
-              element={<SellOnEshop />}
+              element={<SellerOnbording />}
             />
             <Route
               path="/allProducts"
@@ -158,7 +153,7 @@ const App = () => {
           </Routes> 
         </main>
         {/* Footer */}
-        <footer className='w-[92%] mx-auto md:w-[85%]'>
+        <footer className='w-[92%] mx-auto md:w-[85%] z-10'>
           <Footer />
         </footer>
       </Router>

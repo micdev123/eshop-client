@@ -18,8 +18,8 @@ const MainNav = () => {
     return !isLoginOrRegisterPage && (
         <div className='w-full flex items-center justify-between pt-1 pb-4 relative dark:text-slate-200'>
             <nav className="main_nav_left flex">
-                <Link to='/' className='mr-[1.2rem]'>
-                    <h2 className='logo font-bold text-[1rem] md:text-[1.1rem] lg:text-[1rem]'>e-shop.</h2>
+                <Link to='/' className='mr-[0.3rem]'>
+                    <h2 className='logo font-bold text-[1rem] md:text-[1.1rem] lg:text-[1.1rem]'>e-shop.</h2>
                 </Link>
                 <ul className='hidden md:flex items-center'>
                     <li className='hidden md:flex md:gap-x-1 md:items-center lg:mx-4'>
@@ -27,9 +27,6 @@ const MainNav = () => {
                         <p className='hidden lg:flex'> Shop Categories</p>
                         <MdArrowDropDown className='ml-2' />
                     </li>
-                    <Link to='/allProducts' className='mx-4'>
-                        <p>Products</p>
-                    </Link>
                     <Link to='/sell_on_e-shop' className='mx-4'>
                         <p>Sell on e-shop</p>
                     </Link>

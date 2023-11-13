@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { MdArrowDropDown, MdMyLocation } from 'react-icons/md';
 import { HiOutlineLightBulb } from 'react-icons/hi';
+import { SiDynatrace } from 'react-icons/si'
 import { GrMoney } from 'react-icons/gr'
 import { Link, useLocation } from 'react-router-dom';
 import { useGeoLocationStore } from '../../Store/GeoData/geoLocationStore';
@@ -83,27 +84,31 @@ const TopNav = () => {
     return !isLoginOrRegisterPage && (
         <nav className='flex'>
             <ul className='w-full pt-2 pb-1 md:flex md:items-center md:justify-between md:pt-3 md:pb-4'>
-                <div className="left hidden md:flex">
+                <div className="left hidden md:flex items-center gap-x-5">
                     <p className='hidden text-[0.6rem] font-medium text-gray-500 lg:flex dark:text-slate-400'>
                         Free Shipping Over $100 & Free Returns
                     </p>
-                    <li className='hidden md:flex items-center lg:hidden'>
+                    <li className='text-[0.6rem] font-medium flex items-center gap-x-1 text-gray-600 pr-[5px] dark:text-slate-400'>
+                        <SiDynatrace />
+                        Track Order
+                    </li>
+                    {/* <li className='hidden md:flex items-center lg:hidden'>
                         <MdMyLocation className='hidden text-[1rem] text-gray-600 md:flex md:pr-[5px] dark:text-slate-400' />
                         <p className=' text-[0.6rem] text-gray-500 md:flex lg:hidden dark:text-slate-400'>
                            {geoData[0]}
                         </p>
-                    </li>
+                    </li> */}
                 </div>
 
                 <div className="top_right flex items-center justify-between md:w-fit">
                     <div className="mobile hidden md:flex">
-                        <li className=' lg:flex lg:items-center'>
+                        <li className='font-medium lg:flex lg:items-center'>
                             <MdMyLocation className='lg:text-[0.95rem] text-gray-600 lg:flex md:pr-[5px] dark:text-slate-400' />
                             <p className='hidden lg:text-[0.2rem] lg:flex dark:text-slate-400'>
                                 {geoData[0]}
                             </p>
                         </li>
-                        <li className='relative'>
+                        <li className='relative font-medium'>
                             <p className='hidden lg:flex dark:text-slate-400'>USD</p>
                             <MdArrowDropDown
                                 onClick={() => setDropCurrency(!dropCurrency)}
@@ -156,9 +161,15 @@ const TopNav = () => {
                             )}
                         </li>
                     </div>
-                    <Link to='/sell_on_e-shop' className='mr-0 md:ml-[2rem] lg:mr-0'>
-                        <p className='dark:text-slate-400'>sell on e-shop</p>
-                    </Link>
+                    <div className="flex items-center gap-x-4">
+                        <Link to='/trackOrder' className='text-[0.6rem] font-medium flex items-center gap-x-1 text-gray-600 dark:text-slate-400 md:hidden'>
+                            <SiDynatrace />
+                            Track Order
+                        </Link>
+                        <Link to='/sell_on_e-shop' className='mr-0 font-medium md:ml-[2rem] lg:mr-0'>
+                            <p className='dark:text-slate-400'>sell on e-shop</p>
+                        </Link>
+                    </div>
                     <li className='relative'>
                         {options?.map((opt) => (
                             theme === opt.text && (

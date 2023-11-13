@@ -3,7 +3,7 @@ import { BiLeftArrowCircle, BiRightArrowCircle } from 'react-icons/bi'
 import { dealTypes, lastMinuteDeals } from '../../data';
 import Deal from '../Deal';
 
-let count = 0;
+// let count = 0;
 const LastMinuteDeals = () => {
     const [leftCurr, setLeftCurr] = useState(0);
     const [rightCurr, setRightCurr] = useState(0);

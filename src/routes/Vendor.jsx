@@ -1,8 +1,9 @@
 import React from 'react'
 import { BiCurrentLocation, BiSearch, BiSupport } from 'react-icons/bi'
-import { BsFillGridFill, BsFillShareFill } from 'react-icons/bs'
-import { GoThreeBars } from 'react-icons/go'
+import { BsFacebook, BsFillGridFill, BsFillShareFill, BsTwitter } from 'react-icons/bs'
+// import { GoThreeBars } from 'react-icons/go'
 import { GrFormNext } from 'react-icons/gr'
+import { AiFillInstagram } from 'react-icons/ai'
 import { MdCall, MdOutlineFavoriteBorder } from 'react-icons/md'
 import Product from '../components/Product'
 import Stars from '../components/Stars'
@@ -12,32 +13,48 @@ const Vendor = () => {
     return (
         <div>
             {/* Hero Section */}
-            <div className="hero w-[100%] h-[30rem] mb-7 relative sm:h-[22rem] md:h-[17rem]">
-                <div className="hero_img w-[100%] h-[100%] bg-gradient-to-r from-slate-700 to-cyan-700 rounded-md"></div>
-                <div className="content w-[100%] flex top-0 right-0 left-0 mx-auto py-[1.6rem] px-4 md:px-[3rem] absolute">
-                    <div className="left flex flex-col justify-center items-center gap-2 sm:flex-row sm:items-start">
-                        <div className="logo w-[8rem] h-[8rem] mx-auto sm:w-[15rem] sm:h-[10rem] md:w-[8rem] md:h-[8rem]">
-                            <img src="/assets/vendor.png" alt="" />
+            <div className="head w-[100%] mb-7">
+                <div className="head_img w-[100%] h-[10rem] rounded-md bg-red-200">
+                    <img src="/assets/background.jpg" alt="" className='w-[100%] h-[100%] object-cover rounded-md' />
+                </div>
+                <div className="content w-[100%] py-[1.6rem] relative">
+                    <div className="logo w-[5rem] h-[5rem] border-[1px] rounded-full absolute top-[-2.5rem] left-[2rem] p-0.5 bg-zinc-50">
+                        <div className="rounded-full">
+                            <img src="/assets/vendor.jpg" alt="" className='w-[100%] object-cover rounded-full' />
                         </div>
-                        <div className="text_content text-white text-[12px]">
-                            <h2 className='name text-[20px] font-medium mb-2 text-center sm:text-left'>
+                    </div>
+                    {/* <div className="logo w-[8rem] h-[8rem] sm:w-[15rem] sm:h-[10rem] md:w-[8rem] md:h-[8rem]">
+                        <img src="/assets/vendor.png" alt="" />
+                    </div> */}
+                    <div className="w-[100%] mt-[2rem] px-[2rem]">
+                        <div className="text_content text-[12px]">
+                            <h2 className='logo text-[20px] font-medium mb-2 text-center sm:text-left'>
                                 Florence & Family
                             </h2>
-                            <p className="description flex justify-center items-center w-[100%] mb-2 sm:text-left md:w-[25rem]">
+                            <p className="description w-[100%] mb-2">
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad dolore corrupti, amet voluptatum magni provident blanditiis at ratione accusamus iusto!
                             </p>
                             <div className="rating_reviews flex items-center gap-2 mb-2">
                                 <Stars stars={4} />
                                 20 reviews
                             </div>
-                            <p className="address flex items-center gap-2 mb-2">
-                                <BiCurrentLocation />
-                                #21 Main Road, Mama Beach Village
-                            </p>
-                            <p className="contact flex items-center gap-2 mb-2">
-                                <MdCall />
-                                (+232)-000-000-000
-                            </p>
+                            {/* Contacts */}
+                            <div className="contact flex items-center gap-x-3 mt-[1rem]">
+                                <p className="address flex items-center gap-x-2">
+                                    <BiCurrentLocation />
+                                    #21 Main Road, Mama Beach Village
+                                </p>
+                                <div className="w-[1.2px] h-[18px] bg-zinc-400"></div>
+                                <p className="contact flex items-center gap-x-2">
+                                    <MdCall />
+                                    (+232)-000-000-000
+                                </p>
+                                <div className="w-[1.2px] h-[18px] bg-zinc-400"></div>
+                                <BsTwitter className='text-[12.5px]' />
+                                <AiFillInstagram className='text-[12.5px]' />
+                                <BsFacebook className='text-[12.5px]' />
+                            </div>
+                            {/* Proof */}
                             <div className="proof hidden sm:block">
                                 <div className="flex items-center gap-3 mt-4">
                                     <p className='flex flex-col-reverse items-center font-medium'>
@@ -58,7 +75,7 @@ const Vendor = () => {
                     </div>
 
                     {/* Actions */}
-                    <div className="right absolute bottom-[-4rem] right-0 left-0 mx-auto text-white text-[12.5px] flex flex-col items-center justify-center gap-3 sm:flex-row sm:bottom-[-2rem] sm:justify-end md:bottom-[2rem] sm:right-[1rem] md:right-[3rem]">
+                    <div className="right absolute bottom-[-4rem] right-0 left-0 mx-auto text-[12.5px] flex flex-col items-center justify-center gap-6 sm:flex-row sm:bottom-[-2rem] sm:justify-end md:bottom-[2rem] sm:right-[1rem] md:right-[3rem]">
                         <div className="flex items-center gap-3">
                             <p className='flex items-center gap-2'>
                                 <BsFillShareFill className='text-[15px]' />
@@ -69,7 +86,7 @@ const Vendor = () => {
                                 Save Vendor
                             </p>
                         </div>
-                        <button className='bg-slate-800 py-2 px-4 text-[12px] flex items-center gap-2 rounded-sm outline-none'>
+                        <button className='bg-slate-800 text-white py-1 px-4 text-[11px] flex items-center gap-2 rounded-sm outline-none'>
                             <BiSupport className='text-[15px]' />
                             Get Support
                         </button>
@@ -136,45 +153,11 @@ const Vendor = () => {
                             <div className="filter_list">
                                 <div className="list flex items-center my-2">
                                     <input type="checkbox" />
-                                    <label htmlFor="" className='text-[12.5px] ml-2'>In Stock (22)</label>
+                                    <label htmlFor="" className='text-[11.5px] ml-2'>In Stock (22)</label>
                                 </div>
                                 <div className="list flex items-center my-2">
                                     <input type="checkbox" />
-                                    <label htmlFor="" className='text-[12.5px] ml-2'>Out Of Stock (1)</label>
-                                </div>
-                            </div>
-                        </div>
-                        {/* Brands Filter */}
-                        <div className="brands w-[100%] my-4">
-                            <h2 className='text-[14px] font-medium'>Brands</h2>
-                            <div className="search relative flex items-center mt-2 mb-3">
-                                <BiSearch className='absolute' />
-                                <input type="text" placeholder="Search" className='py-1 pl-5 pr-3 text-[12px] bg-transparent border-b-2' />
-                            </div>
-                            <div className="filter_list w-[100%] h-[24vh] overflow-auto scrollbar scrollbar-thumb-slate-400 scrollbar-track-slate-700 scrollbar-w-[3px]">
-                                <div className="list flex items-center my-2">
-                                    <input type="checkbox" />
-                                    <label htmlFor="" className='text-[12.5px] ml-2'>e-shop</label>
-                                </div>
-                                <div className="list flex items-center my-2">
-                                    <input type="checkbox" />
-                                    <label htmlFor="" className='text-[12.5px] ml-2'>e-shop</label>
-                                </div>
-                                <div className="list flex items-center my-2">
-                                    <input type="checkbox" />
-                                    <label htmlFor="" className='text-[12.5px] ml-2'>e-shop</label>
-                                </div>
-                                <div className="list flex items-center my-2">
-                                    <input type="checkbox" />
-                                    <label htmlFor="" className='text-[12.5px] ml-2'>e-shop</label>
-                                </div>
-                                <div className="list flex items-center my-2">
-                                    <input type="checkbox" />
-                                    <label htmlFor="" className='text-[12.5px] ml-2'>e-shop</label>
-                                </div>
-                                <div className="list flex items-center my-2">
-                                    <input type="checkbox" />
-                                    <label htmlFor="" className='text-[12.5px] ml-2'>e-shop</label>
+                                    <label htmlFor="" className='text-[11.5px] ml-2'>Out Of Stock (1)</label>
                                 </div>
                             </div>
                         </div>
@@ -210,15 +193,15 @@ const Vendor = () => {
                             <div className="filter_list">
                                 <div className="list flex items-center my-2">
                                     <input type="checkbox" />
-                                    <label htmlFor="" className='text-[12.5px] ml-2'>XS (22)</label>
+                                    <label htmlFor="" className='text-[11.5px] ml-2'>XS (22)</label>
                                 </div>
                                 <div className="list flex items-center my-2">
                                     <input type="checkbox" />
-                                    <label htmlFor="" className='text-[12.5px] ml-2'>S (1)</label>
+                                    <label htmlFor="" className='text-[11.5px] ml-2'>S (1)</label>
                                 </div>
                                 <div className="list flex items-center my-2">
                                     <input type="checkbox" />
-                                    <label htmlFor="" className='text-[12.5px] ml-2'>M (1)</label>
+                                    <label htmlFor="" className='text-[11.5px] ml-2'>M (1)</label>
                                 </div>
                                 <div className="list flex items-center my-2">
                                     <input type="checkbox" />
@@ -226,11 +209,11 @@ const Vendor = () => {
                                 </div>
                                 <div className="list flex items-center my-2">
                                     <input type="checkbox" />
-                                    <label htmlFor="" className='text-[12.5px] ml-2'>XL (1)</label>
+                                    <label htmlFor="" className='text-[11.5px] ml-2'>XL (1)</label>
                                 </div>
                                 <div className="list flex items-center my-2">
                                     <input type="checkbox" />
-                                    <label htmlFor="" className='text-[12.5px] ml-2'>XXL (1)</label>
+                                    <label htmlFor="" className='text-[11.5px] ml-2'>XXL (1)</label>
                                 </div>
                             </div>
                         </div>
@@ -261,7 +244,7 @@ const Vendor = () => {
                                     <BsFillGridFill />
                                 </div>
                                 <div className="bg-gray-200 py-1 px-1 rounded-sm dark:bg-slate-700">
-                                    <GoThreeBars />
+                                    {/* <GoThreeBars /> */}
                                 </div>
                             </div>
                         </div>

@@ -1,52 +1,15 @@
-import React, { useState } from 'react'
-import { Helmet } from 'react-helmet-async'
-import { toast } from 'react-hot-toast';
-import { AiOutlineDislike, AiOutlineLike } from 'react-icons/ai'
+import React from 'react'
 
-const options = [
-    {
-        value: 'confusing',
-        label: 'This information is unclear or inaccurate',
-    },
-    {
-        value: 'notlookingfor',
-        label: "This is not the information I was seeking",
-    },
-    {
-        value: 'dislikepolicy',
-        label: "I am not in favor of this policy.",
-    },
-];
-
-
-const PrivacyPolicy = () => {
-    const [selectedOption, setSelectedOption] = useState(null);
-    const [yesOutput, setYesOutput] = useState(false);
-    const [noOptions, setNoOptions] = useState(false);
-    const [noOutput, setNoOutput] = useState(false);
-    
-    const HandleNotHelpful = (e) => {
-        e.preventDefault();
-        if (!selectedOption) {
-            toast.error('Please select an option!')
-        }
-        else {
-            setNoOutput(true);
-        }
-    }
+const PrivacyPolicy = () => { 
     return (
-        <div className='mt-4'>
-            <Helmet>
-                <title>e-shop. | User Privacy Policy</title>     
-            </Helmet>
-            <h2 className='font-medium text-[14.5px] mb-2 md:text-[16px] dark:text-slate-200'>
+        <div className=''>
+            <h2 className='font-medium text-[15px] mb-2 md:text-[16px] dark:text-slate-200'>
                 User Privacy Policy
             </h2>
-            <div className="policy_container bg-lighterBlue py-7 px-[10px] rounded-md sm:py-11 sm:px-[1rem] md:px-[3rem] dark:bg-slate-800">
-                <p className='text-[13.5px]'>
-                    Welcome to <span className='logo'>e-shop</span>, a multi-vendor online marketplace based in Sierra Leone, West Africa. This Privacy Policy outlines how we collect, use, disclose, and protect your personal information when you use our website and related services (collectively, "the Platform"). We value your privacy and are committed to safeguarding your personal data. By accessing or using our Platform, you consent to the practices described in this Privacy Policy.
-                </p>
-
+            <p className='text-[13.5px] mt-1'>
+                Welcome to <span className='logo'>e-shop</span>, a multi-vendor online marketplace based in Sierra Leone, West Africa. This Privacy Policy outlines how we collect, use, disclose, and protect your personal information when you use our website and related services (collectively, "the Platform"). We value your privacy and are committed to safeguarding your personal data. By accessing or using our Platform, you consent to the practices described in this Privacy Policy.
+            </p>
+            <div className="policy_container mt-[2rem]">
                 <div className='my-5'>
                     <h3 className='text-[15px] font-medium mb-1'>
                         Information We Collect
@@ -173,73 +136,7 @@ const PrivacyPolicy = () => {
                     By using <span className='logo]'>e-shop</span>, you acknowledge that you have read and understood this Privacy Policy and agree to the collection and use of your personal information as described herein.
                 </p>
 
-                <div className="w-[100%]  mt-[2.5rem] border-[1px] border-zinc-200 p-3 rounded-md md:w-fit">
-                    {!(noOptions || yesOutput) && (
-                        <div className="">
-                            <p className='text-[14px] font-medium mb-2'>
-                                Was this information helpful?
-                            </p>
-                        
-                            <div className="buttons flex items-center gap-x-3">
-                                <button
-                                    className='bg-zinc-300 rounded-md p-[0.4rem] outline-none'
-                                    onClick={() => setYesOutput(!yesOutput)}
-                                >
-                                    <AiOutlineLike />
-                                </button>
-                                <button
-                                    className='bg-zinc-300 rounded-md p-[0.4rem] outline-0'
-                                    onClick={() => setNoOptions(!noOptions)}
-                                >
-                                    <AiOutlineDislike />
-                                </button>
-                                
-                            </div>
-                        </div>
-                    )}
-                    {yesOutput && (
-                        <p className="yes_output text-[14px] font-medium">
-                        Thanks for your feedback.
-                        </p>
-                    )}
-                    <div className="">
-                        {!noOutput && (
-                            <div className="">
-                                {noOptions && (
-                                    <div className="">
-                                        <p className='text-[14px] font-medium mb-2'>
-                                            Please choose the option that most accurately represents the information provided:
-                                        </p>
-                                        
-                                        {options.map((option) => (
-                                            <label key={option.value} className='my-1 text-[13.5px] flex items-center gap-x-2'>
-                                                <input
-                                                    type="radio"
-                                                    value={option.value}
-                                                    checked={selectedOption === option.value}
-                                                    onChange={(e) => setSelectedOption(e.target.value)}
-                                                    className=''
-                                                />
-                                                {option.label}
-                                            </label>
-                                        ))}
-                                        <button
-                                            className='w-fit mt-4 text-[11.5px] bg-zinc-700 text-white rounded-sm py-[4px] px-[15px]'
-                                            onClick={HandleNotHelpful}
-                                        >
-                                            Submit
-                                        </button>
-                                    </div>
-                                )}
-                            </div>
-                        )}
-                        {noOutput && (
-                            <p className='text-[13px] font-medium'>
-                                Thank you for your feedback! Although we may not respond directly, we value your input, and we'll utilize this information to enhance our online Help resources.
-                            </p>
-                        )}
-                    </div>
-                </div>
+                
             </div>
         </div>
     )

@@ -162,7 +162,7 @@ const SingleProduct = () => {
                                 <Link to='/vendor/1' className="">
                                     {/* Vendor Logo */}
                                     <div className="vendor_img w-[11rem] h-[10rem] mx-auto">
-                                        <img src="/assets/vendor.png" alt="" className='w-[100%] object-contain' />
+                                        <img src="/assets/vendor.jpg" alt="" className='w-[100%] object-contain' />
                                     </div>
                                     {/* Vendor Name */}
                                     <h2 className='text-center font-medium text-amber-700 text-[15px] mt-2 dark:text-amber-500'>

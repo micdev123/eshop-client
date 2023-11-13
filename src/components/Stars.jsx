@@ -2,18 +2,19 @@ import React from 'react'
 import { AiFillStar, AiOutlineStar } from 'react-icons/ai';
 import { FaStarHalfAlt } from 'react-icons/fa'
 
-const Stars = ({ stars }) => {
+// text-[0.6rem] md:text-[0.7rem]
+const Stars = ({ stars, size }) => {
     const ratingStars = Array.from({ length: 5 }, (element, index) => {
         let number = index + 0.5;
 
         return (
-            <span key={index}>
+            <span className="text-ratingBg" key={index}>
                 {stars >= index + 1 ? (
-                    <AiFillStar className='text-ratingBg text-[0.6rem] md:text-[0.7rem]' />
+                    <AiFillStar  />
                 ) : stars >= number ? (
-                    <FaStarHalfAlt className='text-ratingBg text-[0.6rem] md:text-[0.7rem]' />
+                    <FaStarHalfAlt />
                 ) : (
-                    <AiOutlineStar className='text-ratingBg text-[0.6rem] md:text-[0.7rem]' />
+                    <AiOutlineStar />
                 )
                 }
             </span>

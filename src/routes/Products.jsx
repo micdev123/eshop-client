@@ -3,7 +3,7 @@ import Stars from '../components/Stars'
 import { BiSearch } from 'react-icons/bi'
 import { GrFormClose, GrFormNext } from 'react-icons/gr';
 import { BsFillGridFill } from 'react-icons/bs';
-import { GoThreeBars } from 'react-icons/go'
+// import { GoThreeBars } from 'react-icons/go'
 import { products } from '../data';
 import Product from '../components/Product';
 import { Link } from 'react-router-dom';
@@ -258,7 +258,7 @@ export const Products = () => {
                                 <BsFillGridFill />
                             </div>
                             <div className="bg-gray-200 py-1 px-1 rounded-sm dark:bg-slate-700">
-                                <GoThreeBars />
+                                {/* <GoThreeBars /> */}
                             </div>
                         </div>
                     </div>

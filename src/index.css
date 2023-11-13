@@ -29,8 +29,8 @@ body {
 
 
 .main_nav_left p {
-    font-size: 0.85rem;
-    font-weight: 500;
+    font-size: 0.8rem;
+    @apply font-medium;
 }
 
 .product:hover .icons {
@@ -38,15 +38,12 @@ body {
     transition: all 3s ease-in-out;
 }
 
-.collection, .top_seller, .recentViewed, .categories_container, .filter_list {
+.collection, .top_seller, .recentViewed, .categories_container, .filter_list, .sub_categories_tabs {
     scrollbar-width: none;
     /* cursor: pointer; */
 }
 
 
-.fade-anim .slider_deals {
-  animation: fadeAnim 1s ease-out;
-}
 
 .active .head_title {
     @apply text-slate-800
@@ -56,11 +53,25 @@ body {
     @apply flex
 }
 
+/* Category tab ( Sub-categories ) */
+.tab {
+    scroll-behavior: smooth;
+}
+
+.slider .thumb {
+    width: 20px;
+    height: 20px;
+    background-color: #5a8692;
+    border-radius: 30%;
+    cursor: pointer;
+    border: 1px solid #272727;
+}
+
+/* Policies */
 .agreement_container li, .policy_container li, .vendor_policy_container li {
     list-style-type: disc;
     margin: 10px 0 10px 2rem;
     font-size: 14px;
-
 }
 
 .policy_container span {
@@ -72,10 +83,14 @@ body {
 }
 
 
+
 /* .products_container {
     display: grid;
 } */
 
+.fade-anim .slider_deals {
+  animation: fadeAnim 1s ease-out;
+}
 
 @keyframes fadeAnim {
   from {
@@ -107,3 +122,9 @@ body {
     } 
     
 }
+
+
+/* Reference sake */
+/* .scrollable-tabs-container ul::-webkit-scrollbar {
+    display: none;
+} */

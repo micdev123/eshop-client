@@ -1,10 +1,8 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 
-const ProductSlider = ({
-    children: filtered,
-    autoSlide = false,
-    autoSlideInterval = 3000
-}) => {
+const ProductSlider = ({ children: filtered, autoSlide = false, autoSlideInterval = 1000 * filtered.length }) => {
+
+    // const slideRef = useRef(null)
     // Slider state
     const [curr, setCurr] = useState(0);
 
@@ -17,7 +15,7 @@ const ProductSlider = ({
     }, [])
     return (
         <div className='min-w-[100%] overflow-hidden'>
-            <div className="flex justify-between min-w-[100%] transition-transform ease-out duration-500" style={{ transform: `translateX(-${curr * 100}%)` }}>
+            <div className="flex w-[100%] mx-auto transition-transform ease-out duration-500 md:justify-between" style={{ transform: `translateX(-${curr * 100}%)` }}>
                 {filtered}                 
             </div>
             {/* <button onClick={next}>test</button> */}
