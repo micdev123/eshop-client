@@ -1,7 +1,8 @@
 import React, { useRef } from 'react'
-import { BiLeftArrowCircle, BiRightArrowCircle } from 'react-icons/bi'
+import { GrFormPrevious } from "react-icons/gr";
 import { categories } from '../../data'
 import { Link } from 'react-router-dom'
+import { MdNavigateNext } from 'react-icons/md'
 
 const Categories = () => {
     const categories_container = useRef(null) 
@@ -24,11 +25,11 @@ const Categories = () => {
             <div className="categories_header flex items-center justify-between mb-[10px] dark:text-slate-200">
                 <h2 className='text-[14px] font-medium text-black lg:text-[15px] dark:text-slate-200'>Shop by categories</h2>
                 <div className="navigation flex items-center">
-                    <BiLeftArrowCircle
+                    <GrFormPrevious
                         onClick={handleLeftSlide}
                         className='text-[1.1rem] mr-2 cursor-pointer'
                     />
-                    <BiRightArrowCircle
+                    <MdNavigateNext
                         onClick={handleRightSlide}
                         className='text-[1.1rem] cursor-pointer'
                     />

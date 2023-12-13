@@ -18,10 +18,10 @@ const Footer = () => {
                 <div className="w-[90%] mx-auto flex items-center justify-between md:w-[80%]">
                     <div className="content">
                         <h2 className='font-medium text-[1.15rem] w-[18rem] md:text-[1.3rem] md:w-[22rem]'>
-                            Stay home & get your daily needs from our shop
+                            Stay home & get your daily needs | updates from our shop
                         </h2>
-                        <p className='text-[11px] text-lightBlack mt-2 dark:text-slate-200 w-[12rem]'>
-                            Get daily update | Start your daily shopping with e-shop
+                        <p className='text-[11px] text-lightBlack mt-2 dark:text-slate-200 md:w-[22rem]'>
+                            Get daily update. Be aware of all the discounts and big sales! Don't miss your benefits.
                         </p>
                         {/* New Letter Form */}
                         <form action="" className='mt-4'>
@@ -34,7 +34,7 @@ const Footer = () => {
                         </form>
                     </div>
                     {/* NewLetter Image */}
-                    <div className="img_newsletter hidden w-[9rem] h-[9rem] sm:block">
+                    <div className="img_newsletter hidden w-[13rem] h-[13rem] sm:block">
                         <img src="/assets/newsletter.png" alt=""  className='w-[100%] object-contain relative top-[-3rem]'/>
                     </div>
                 </div>

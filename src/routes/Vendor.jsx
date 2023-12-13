@@ -13,12 +13,14 @@ const Vendor = () => {
     return (
         <div>
             {/* Hero Section */}
-            <div className="head w-[100%] mb-7">
+            <div className="head w-[100%] mb-7 dark:text-white">
+                {/* Store Cover Image */}
                 <div className="head_img w-[100%] h-[10rem] rounded-md bg-red-200">
                     <img src="/assets/background.jpg" alt="" className='w-[100%] h-[100%] object-cover rounded-md' />
                 </div>
                 <div className="content w-[100%] py-[1.6rem] relative">
-                    <div className="logo w-[5rem] h-[5rem] border-[1px] rounded-full absolute top-[-2.5rem] left-[2rem] p-0.5 bg-zinc-50">
+                    {/* Store Logo */}
+                    <div className="logo w-[5rem] h-[5rem] border-[1px] rounded-full absolute top-[-2.5rem] left-[1rem] p-0.5 bg-zinc-50 md:left-[2rem]">
                         <div className="rounded-full">
                             <img src="/assets/vendor.jpg" alt="" className='w-[100%] object-cover rounded-full' />
                         </div>
@@ -26,12 +28,13 @@ const Vendor = () => {
                     {/* <div className="logo w-[8rem] h-[8rem] sm:w-[15rem] sm:h-[10rem] md:w-[8rem] md:h-[8rem]">
                         <img src="/assets/vendor.png" alt="" />
                     </div> */}
-                    <div className="w-[100%] mt-[2rem] px-[2rem]">
+                    {/* Store Content */}
+                    <div className="w-[100%] mt-[2rem] md:px-[2rem]">
                         <div className="text_content text-[12px]">
-                            <h2 className='logo text-[20px] font-medium mb-2 text-center sm:text-left'>
+                            <h2 className='logo text-[20px] font-medium mb-2'>
                                 Florence & Family
                             </h2>
-                            <p className="description w-[100%] mb-2">
+                            <p className="description w-[100%] mb-2 text-[14.5px]">
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad dolore corrupti, amet voluptatum magni provident blanditiis at ratione accusamus iusto!
                             </p>
                             <div className="rating_reviews flex items-center gap-2 mb-2">
@@ -39,33 +42,35 @@ const Vendor = () => {
                                 20 reviews
                             </div>
                             {/* Contacts */}
-                            <div className="contact flex items-center gap-x-3 mt-[1rem]">
+                            <div className="contact flex flex-col gap-y-3 mt-[1rem] text-[13px] md:flex-row md:items-center md:gap-x-3 md:gap-y-0">
                                 <p className="address flex items-center gap-x-2">
                                     <BiCurrentLocation />
                                     #21 Main Road, Mama Beach Village
                                 </p>
-                                <div className="w-[1.2px] h-[18px] bg-zinc-400"></div>
+                                <div className="separator hidden w-[1.2px] h-[18px] bg-zinc-400 md:flex"></div>
                                 <p className="contact flex items-center gap-x-2">
                                     <MdCall />
                                     (+232)-000-000-000
                                 </p>
-                                <div className="w-[1.2px] h-[18px] bg-zinc-400"></div>
-                                <BsTwitter className='text-[12.5px]' />
-                                <AiFillInstagram className='text-[12.5px]' />
-                                <BsFacebook className='text-[12.5px]' />
+                                <div className="separator hidden w-[1.2px] h-[18px] bg-zinc-400 md:flex"></div>
+                                <div className="flex items-center gap-x-[10px]">
+                                    <BsTwitter className='text-[14px]' />
+                                    <AiFillInstagram className='text-[14px]' />
+                                    <BsFacebook className='text-[14px]' />
+                                </div>
                             </div>
                             {/* Proof */}
                             <div className="proof hidden sm:block">
                                 <div className="flex items-center gap-3 mt-4">
-                                    <p className='flex flex-col-reverse items-center font-medium'>
+                                    <p className='flex flex-col-reverse items-center text-[13.5px] font-medium'>
                                         <span className='text-[16px]'>1.9K</span>
                                         Items sold
                                     </p>
-                                    <p className='flex flex-col-reverse items-center font-medium'>
+                                    <p className='flex flex-col-reverse items-center text-[13.5px] font-medium'>
                                         <span className='text-[16px]'>90%</span>
                                         Delivery On Time
                                     </p>
-                                    <p className='flex flex-col-reverse items-center font-medium'>
+                                    <p className='flex flex-col-reverse items-center text-[13.5px] font-medium'>
                                         <span className='text-[16px]'>90%</span>
                                         Response Time
                                     </p>
@@ -75,7 +80,7 @@ const Vendor = () => {
                     </div>
 
                     {/* Actions */}
-                    <div className="right absolute bottom-[-4rem] right-0 left-0 mx-auto text-[12.5px] flex flex-col items-center justify-center gap-6 sm:flex-row sm:bottom-[-2rem] sm:justify-end md:bottom-[2rem] sm:right-[1rem] md:right-[3rem]">
+                    <div className="right absolute bottom-[-4rem] left-0 text-[12.5px] flex flex-col items-center justify-center gap-6 sm:flex-row sm:bottom-[-2rem] sm:justify-end md:bottom-[2rem] sm:right-[1rem] md:right-[3rem]">
                         <div className="flex items-center gap-3">
                             <p className='flex items-center gap-2'>
                                 <BsFillShareFill className='text-[15px]' />
@@ -95,7 +100,7 @@ const Vendor = () => {
             </div>
 
             {/* Search */}
-            <div className="search w-[90%] mx-auto flex items-center justify-center relative mt-10 mb-14 md:w-[39%]">
+            <div className="search w-[95%] mx-auto flex items-center justify-center relative mt-10 mb-14 md:w-[39%]">
                 <BiSearch className='absolute left-3' />
                 <input type="text" placeholder='Search Product' className='w-[100%] text-[12px] py-2  pl-8 rounded-md bg-zinc-200 border-2 md:py-2.5' />
             </div>
@@ -254,26 +259,6 @@ const Vendor = () => {
                             {products.slice(0, 12).map((product) => (
                                 <Product product={product} key={product?.id} />
                             ))}
-                        </div>
-                        
-                        {/* Pagination */}
-                        <div className="pagination w-[100%] bg-lighterBlue py-2 px-3 rounded-sm flex justify-between items-center mt-2 dark:bg-slate-800 dark:text-slate-200">
-                            {/* Info */}
-                            <p className='bg-zinc-200 py-1.5 px-3 text-[10px] font-medium rounded-sm dark:bg-slate-700'>
-                                Showing 12 of 21
-                            </p>
-                            {/* Pagination Button */}
-                            <div className="pagination_container flex gap-2 items-center justify-center">
-                                <div className="w-[1.3rem] h-[1.3rem] bg-slate-700 rounded-full text-white flex justify-center items-center dark:bg-sky-800">
-                                <p className='text-[10px] font-semibold'>1</p>
-                                </div>
-                                <div className="w-[1.3rem] h-[1.3rem] bg-slate-700 rounded-full text-white flex justify-center items-center dark:bg-sky-800">
-                                    <p className='text-[10px] font-semibold'>2</p>
-                                </div>
-                                <div className="w-[1.3rem] h-[1.3rem] bg-slate-300 rounded-full flex justify-center items-center">
-                                    <GrFormNext className='text-[15px] font-semibold text-white' />
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>

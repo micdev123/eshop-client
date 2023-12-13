@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react'
 
-import { BsArrowRightCircle, BsDot } from 'react-icons/bs'
+import { BsDot } from 'react-icons/bs'
 import { collectionProductSlider, categories } from '../../data'
 import FeaturedCategory from './FeaturedCategory'
 import FeaturedProduct from './FeaturedProduct'
 import ProductSlider from './ProductSlider'
+import { MdNavigateNext } from 'react-icons/md'
 
 const HeaderBody = () => {
     const autoSlide = true;
@@ -38,9 +39,9 @@ const HeaderBody = () => {
 
 
     return (
-        <div className='bg-lighterBlue w-full rounded-[5px] py-4 pl-4 flex flex-col sm:justify-center lg:items-center lg:justify-between sm:py-10 sm:px-8 lg:flex-row lg:my-4 lg:mb-[4rem] lg:gap-x-[1rem]  relative overflow-hidden dark:bg-zinc-800 dark:text-slate-200'>
+        <div className='bg-lighterBlue w-full rounded-[5px] py-4 pl-4 flex flex-col sm:justify-center lg:items-center lg:justify-between sm:py-10 sm:px-[3rem] lg:flex-row lg:my-4 lg:mb-[4rem] lg:gap-x-[1rem]  relative overflow-hidden dark:bg-zinc-800 dark:text-slate-200'>
             {/* Dot Navigators */}
-            <div className="dot_nav_btn hidden items-center justify-center sm:pr-5 lg:flex lg:flex-col">
+            <div className="dot_nav_btn hidden items-center justify-center sm:pr-[2rem] lg:flex lg:flex-col">
                 {categories_.length > 0 && categories_?.map((_, i) => (
                     <BsDot onClick={() => setCurrent(i)} className={`text-[1.5rem] p-[2px] my-3 transition-all cursor-pointer ${current === i ? 'border-2 border-amber-600 border-solid rounded-full text-amber-600' : 'text-lightBlack dark:text-gray-200' }`} key={i} />
                 ))}
@@ -69,9 +70,9 @@ const HeaderBody = () => {
             
             <button
                 onClick={next}
-                className="next_nav_btn hidden sm:pl-2 lg:flex md:pl-3 absolute right-10 lg:static lg:pr-4"
+                className="next_nav_btn hidden w-fit border-[1px] border-zinc-700 rounded-full sm:ml-2 lg:flex md:ml-3 absolute right-10 lg:static lg:mr-4"
             >
-                <BsArrowRightCircle className='text-[1.2rem] font-thin text-gray-600 dark:text-gray-200' />
+                <MdNavigateNext className='text-[1.2rem] font-thin text-gray-600 dark:text-gray-200' />
             </button>
 
             {/* Small Screens */}

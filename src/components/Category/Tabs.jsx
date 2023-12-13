@@ -62,18 +62,18 @@ const Tabs = ({ category, setActiveSub_category }) => {
     }, []);
     
     return (
-        <div className="sub_categories_tabs w-[100%] flex items-center justify-between bg-zinc-100  relative">
+        <div className="sub_categories_tabs w-[100%] flex items-center justify-between bg-zinc-100  relative dark:bg-zinc-800 dark:text-white">
             <div className="buttons flex items-center z-20">
                 <button
                     id="backButton"
                     onClick={() => slidePre()}
-                    className="hidden absolute left-0 px-[20px] h-[100%] bg-gradient-to-r from-zinc-200 to-zinc-100 hover:bg-red-400">
+                    className="hidden absolute left-0 px-[20px] h-[100%] bg-gradient-to-r from-zinc-200 to-zinc-100 dark:from-zinc-900 dark:to-zinc-800 dark:bg-zinc-600 dark:text-white">
                     <IoIosArrowBack />
                 </button>
                 <button
                     id="forwardButton"
                     onClick={() => slideNext()}
-                    className="absolute right-0 px-[20px] h-[100%] bg-gradient-to-r from-zinc-100 to-zinc-200 hover:bg-red-700">
+                    className="absolute right-0 px-[20px] h-[100%] bg-gradient-to-r from-zinc-100 to-zinc-200 dark:from-zinc-800 dark:to-zinc-900 dark:text-white">
                         <IoIosArrowForward />
                 </button>
             </div>
@@ -84,7 +84,7 @@ const Tabs = ({ category, setActiveSub_category }) => {
                         setTargetSub_category("all");
                         setActiveSub_category("all")
                     }}
-                    className={`text-[13px] px-[1rem] rounded-md ${targetSub_category === 'all' && 'bg-zinc-800 text-white'}`}>
+                    className={`text-[13px] px-[1rem] rounded-md ${targetSub_category === 'all' && 'bg-zinc-800 text-white dark:bg-zinc-600 dark:text-white'}`}>
                     All
                 </button>
                 {category?.subCategories &&

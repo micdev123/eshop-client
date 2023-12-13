@@ -19,11 +19,11 @@ const Header = ({ category }) => {
         return () => clearInterval(slideInterval) // When carousal unmount
     }, [autoSlide, category.photos])
     return (
-         <div className="head w-[100%] flex flex-col items-center gap-y-[2rem]  md:flex-row md:gap-x-[5rem] md:gap-y-0">
+         <div className="head w-[100%] flex flex-col items-center gap-y-[2rem]  md:flex-row md:gap-x-[5rem] md:gap-y-0 dark:text-white">
             {/* Category Contents */}
             <div className="category-content w-[100%] md:w-[55%]">
                 {/* Category Name */}
-                <p className='text-[10px] w-fit bg-zinc-200 py-[2px] px-[7px] font-medium'>
+                <p className='text-[10px] w-fit bg-zinc-200 py-[2px] px-[7px] font-medium dark:bg-zinc-700 dark:text-white'>
                     {category?.collection_name}
                 </p>
 
@@ -46,8 +46,8 @@ const Header = ({ category }) => {
             </div>
 
             {/* Category Image */}
-            <div className="image w-[100%] h-[25rem] flex flex-col  bg-gradient-to-b from-slate-200 to-zinc-50 rounded-md p-[2rem] md:w-[45%]">
-                <div className="w-[100%] h-[100%] flex overflow-hidden bg-gradient-to-b from-slate-200 to-zinc-50">
+            <div className="image w-[100%] h-[25rem] flex flex-col  bg-gradient-to-b from-slate-200 to-zinc-50 rounded-md p-[2rem] md:w-[45%] dark:from-zinc-800 dark:to-zinc-900">
+                <div className="w-[100%] h-[100%] flex overflow-hidden bg-gradient-to-b from-slate-200 to-zinc-50 dark:from-zinc-800 dark:to-zinc-900">
                     <div className="slide-in-right w-[100%] h-[100%] transition-transform linear duration-500 relative" ref={slideRef} >
                         <img src={category?.photos && category?.photos[current]} alt="" className=' w-[100%] h-[100%] object-cover rounded-md absolute right-0' />
                     </div>

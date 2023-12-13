@@ -35,7 +35,7 @@ const FeaturedProduct = ({ product }) => {
                                 ${product?.product_price}
                             </p>
                         </div>
-                        <button className='hidden bg-amber-600 text-[0.6rem] rounded-[3px] text-white sm:mt-0 lg:mt-2 lg:block sm:text-[0.6rem] sm:py-[4px] sm:px-[15px]'>
+                        <button className='hidden bg-amber-600 text-[0.6rem] rounded-[3px] text-white sm:mt-0 lg:mt-2 lg:block sm:text-[12px] sm:py-[5px] sm:px-[15px]'>
                             Buy Now
                         </button>
                     </div>

@@ -166,7 +166,7 @@ export const RegisterAuth = () => {
                             }}
                             shape="square"
                             text="continue_with"
-                            width='310px'
+                            width='350px'
                             // logo_alignment="center"
                             // size='medium'
                             theme="filled_black"

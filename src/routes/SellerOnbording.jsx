@@ -88,7 +88,7 @@ const SellerOnbording = () => {
     
     // console.log(socialContacts);
     return (
-        <div className='relative mb-[2rem]'>
+        <div className='relative mb-[2rem] dark:text-slate-200'>
             <div className={modalOpen ? `overlay w-[100vw] h-[100%] bg-zinc-600 fixed top-0 left-0 z-20 opacity-[0.4]` : 'hidden'}></div>
             {modalOpen && (
                 <div className="w-[90%] h-[93.5vh] fixed top-[2rem] left-0 right-0 mx-auto z-30 overflow-auto scrollbar scrollbar-thumb-slate-400 scrollbar-track-slate-700 scrollbar-w-[2px]">
@@ -101,7 +101,8 @@ const SellerOnbording = () => {
                     </button>
                 </div>
             )}
-            <div className="head flex items-center gap-x-1">
+            {/* Head */}
+            <div className="head flex flex-col gap-1 lg:flex-row lg:items-center">
                 <div className="img w-[10rem]">
                     <img src="/assets/onboarding.png" alt="onboarding" className='w-full object-cover' />
                 </div>
@@ -109,14 +110,15 @@ const SellerOnbording = () => {
                     <h2 className='text-[1.2rem] font-medium'>
                         Vendor Onboarding
                     </h2>
-                    <p className='w-[60%] text-[12.5px] mt-1'>
+                    <p className=' text-[12.5px] mt-1 md:w-[60%]'>
                         Welcome! We're excited to have you join our <span className='logo font-medium text-[14px]'>e-shop</span> as a seller. Please provide the following information to get started:
                     </p>
                     {/* <p className='w-[70%] text-[12.5px] mt-1'>
                         We're here to support you throughout the onboarding process and beyond. If you have any questions or need assistance, please don't hesitate to contact us at <span className='text-amber-700'>eshoponlineMarketplace@gmail.com</span>
                     </p> */}
+                    {/* Legal Buttons */}
                     <div className="flex items-end gap-x-5 mt-3">
-                        <button className='text-[11px] flex items-center gap-x-2 bg-slate-500 text-white py-[3px] px-[10px] rounded-sm border-0 outline-none'>
+                        <button className='text-[11px] flex items-center gap-x-2 bg-slate-500 text-white py-[5px] px-[10px] rounded-sm border-0 outline-none md:py-[3px]'>
                             <ImDownload className='text-[13px]' />
                             Vendor Agreement
                         </button>
@@ -129,24 +131,26 @@ const SellerOnbording = () => {
                     </div>
                 </div>
             </div>
-            <form action="" className='w-[71%] mx-auto mt-[1.5rem]'>
+            {/* Form */}
+            <form action="" className='mx-auto mt-[1.5rem] lg:w-[71%]'>
                 {/* Store Information */}
                 <div className="layer my-[1rem]">
                     <h2 className='text-[1rem] font-medium mb-[0.85rem]'>Store Information</h2>
                     {/* Store name | Store Address */}
-                    <div className="w-[100%] flex items-center gap-x-[1rem]">
+                    <div className="w-[100%] flex flex-col items-center gap-x-[1rem] md:flex-row">
+                        {/* Store Name */}
                         <div className="form-group w-[100%] flex flex-col my-3">
                             <label htmlFor="" className='text-[13.5px] font-medium mb-2'>
                                 Store Name:
                             </label>
-                            <input type="text" placeholder='Enter store name' className='text-[12px] py-[5px] px-[10px] rounded-md outline-none border-[1px]' />
+                            <input type="text" placeholder='Enter store name' className='text-[12px] py-[5px] px-[10px] rounded-md outline-none border-[1px] dark:bg-zinc-800 dark:text-white' />
                         </div>
-
+                        {/* Store Address */}
                         <div className="form-group w-[100%] flex flex-col my-[1.1rem]">
                             <label htmlFor="" className='text-[13.5px] font-medium mb-2'>
                                 Store Address:
                             </label>
-                            <input type="text" placeholder='Enter store address' className='text-[12px] py-[5px] px-[10px] rounded-md outline-none border-[1px]' />
+                            <input type="text" placeholder='Enter store address' className='text-[12px] py-[5px] px-[10px] rounded-md outline-none border-[1px] dark:bg-zinc-800 dark:text-white' />
                         </div>
                     </div>
 
@@ -155,10 +159,10 @@ const SellerOnbording = () => {
                         <label htmlFor="" className='text-[13.5px] font-medium mb-2'>
                             Store Description:
                         </label>
-                        <p className='text-[11px] mb-3 text-zinc-600'>
+                        <p className='text-[11px] mb-3 text-zinc-600 dark:text-slate-400'>
                             Provide a short description that best describes your store to your audience.
                         </p>
-                        <textarea name="" id="" cols="30" rows="10" placeholder='Short description' className='text-[12px] p-[10px] rounded-md outline-none border-[1px]'></textarea>
+                        <textarea name="" id="" cols="30" rows="10" placeholder='Short description' className='text-[12px] p-[10px] rounded-md outline-none border-[1px] dark:bg-zinc-800 dark:text-white'></textarea>
                     </div>
 
                     {/* Store category */}
@@ -166,7 +170,7 @@ const SellerOnbording = () => {
                         <label htmlFor="" className='text-[13.5px] font-medium mb-2'>
                             Store Category:
                         </label>
-                        <p className='text-[11px] mb-3 text-zinc-600'>
+                        <p className='text-[11px] mb-3 text-zinc-600 dark:text-slate-400'>
                             To help buyers find your store. Select category that best represents your store
                         </p>
                         <div className="w-[100%] flex items-center gap-x-2">
@@ -176,14 +180,14 @@ const SellerOnbording = () => {
                                     <button
                                             type='button'
                                             onClick={() => setOpenCategories(!openCategories)}
-                                            className='w-[100%] flex items-center justify-between cursor-pointer text-[11.5px] bg-white py-[6px] px-[10px] rounded-md font-medium border-[1px]'
+                                            className='w-[100%] flex items-center justify-between cursor-pointer text-[11.5px] bg-white py-[6px] px-[10px] rounded-md font-medium border-[1px] dark:bg-zinc-800 dark:text-white'
                                         >
                                             Select category
                                             <IoMdArrowDropdown className='text-[14px]' />
                                     </button>
                                     {/* Categories options */}
                                     {openCategories && (
-                                        <div className="categories w-[100%] h-[35vh] absolute left-0 top-[1.9rem] bg-white py-2 px-3 rounded-sm shadow-sm border-[1px] border-slate-100 overflow-auto scrollbar scrollbar-thumb-slate-400 scrollbar-track-slate-700 scrollbar-w-[2px] z-20">
+                                        <div className="categories w-[100%] h-[35vh] absolute left-0 top-[1.9rem] bg-white py-2 px-3 rounded-sm shadow-sm border-[1px] border-slate-100 overflow-auto scrollbar scrollbar-thumb-slate-400 scrollbar-track-slate-700 scrollbar-w-[2px] z-20 dark:bg-zinc-800 dark:text-white">
                                             {categories?.map((category, index) => (
                                                 <div
                                                     key={category?.id}
@@ -214,7 +218,7 @@ const SellerOnbording = () => {
                                 
                         </div>
                         {categories?.filter((category) => category.slug === selectedCategory).map((selected) => (
-                            <div className="bg-white flex gap-x-3 p-4 rounded-md mt-1 border-[1px] border-cyan-700" key={selected.slug}>
+                            <div className="bg-white flex gap-x-3 p-4 rounded-md mt-1 border-[1px] border-cyan-700 dark:bg-zinc-800 dark:text-white" key={selected.slug}>
                                 {/* Radio box */}
                                 <div className="min-w-[0.84rem] h-[0.8rem] border-[1.5px] border-cyan-700 rounded-full flex items-center justify-center">
                                     <div className="w-[0.47rem] h-[0.48rem] bg-cyan-700 rounded-full"></div>
@@ -237,7 +241,7 @@ const SellerOnbording = () => {
                         <label htmlFor="" className='text-[13.5px] font-medium mb-2'>
                             Store Delivery Methods (You can select more than one):
                         </label>
-                        <p className='text-[11px] mb-3 text-zinc-600'>
+                        <p className='text-[11px] mb-3 text-zinc-600 dark:text-slate-400'>
                             Specify the delivery methods you offer to ensure that customers are informed about how their orders will be delivered and how long it might take to receive them.
                         </p>
                         <div className="w-[100%] flex items-center gap-x-2">
@@ -247,14 +251,14 @@ const SellerOnbording = () => {
                                 <button
                                         type='button'
                                         onClick={() => setOpenDeliveryMethods(!openDeliveryMethods)}
-                                        className='w-[100%] flex items-center justify-between cursor-pointer text-[11.5px] bg-white py-[6px] px-[10px] rounded-md font-medium border-[1px]'
+                                        className='w-[100%] flex items-center justify-between cursor-pointer text-[11.5px] bg-white py-[6px] px-[10px] rounded-md font-medium border-[1px] dark:bg-zinc-800 dark:text-white'
                                     >
                                         Select delivery methods
                                         <IoMdArrowDropdown className='text-[14px]' />
                                 </button>
                                 {/* Categories options */}
                                 {openDeliveryMethods && (
-                                    <div className="categories w-[100%] h-[33vh] absolute left-0 top-[1.9rem] bg-white py-2 px-3 rounded-sm shadow-sm border-[1px] border-slate-100 overflow-auto scrollbar scrollbar-thumb-slate-400 scrollbar-track-slate-700 scrollbar-w-[2px] z-20">
+                                    <div className="categories w-[100%] h-[33vh] absolute left-0 top-[1.9rem] bg-white py-2 px-3 rounded-sm shadow-sm border-[1px] border-slate-100 overflow-auto scrollbar scrollbar-thumb-slate-400 scrollbar-track-slate-700 scrollbar-w-[2px] z-20 dark:bg-zinc-800 dark:text-white">
                                         {deliveryMethods?.map((method, index) => (
                                             <div
                                                 key={method?.id}
@@ -277,7 +281,7 @@ const SellerOnbording = () => {
                                 )}
                                 <div className="output">
                                     {selectedDeliveryMethods?.map((method, index) => (
-                                        <div className="bg-white flex items-center justify-between p-4 rounded-md mt-1 border-[1px] border-cyan-700" key={method?.id}>
+                                        <div className="bg-white flex items-center justify-between p-4 rounded-md mt-1 border-[1px] border-cyan-700 dark:bg-zinc-800 dark:text-white" key={method?.id}>
                                             <div className="flex gap-x-3">
                                                 {/* Radio box */}
                                                 <div className="min-w-[0.84rem] h-[0.8rem] border-[1.5px] border-cyan-700 rounded-full flex items-center justify-center">
@@ -310,7 +314,7 @@ const SellerOnbording = () => {
                         <label htmlFor="" className='text-[13.5px] font-medium mb-2'>
                             Store Payment Methods (You can select more than one):
                         </label>
-                        <p className='text-[11px] mb-3 text-zinc-600'>
+                        <p className='text-[11px] mb-3 text-zinc-600 dark:text-slate-400'>
                             Specify the payment methods you are willing to accept from customers for your products or services.
                         </p>
                         <div className="w-[100%] flex items-center gap-x-2">
@@ -320,14 +324,14 @@ const SellerOnbording = () => {
                                 <button
                                         type='button'
                                         onClick={() => setOpenPaymentMethods(!openPaymentMethods)}
-                                        className='w-[100%] flex items-center justify-between cursor-pointer text-[11.5px] bg-white py-[6px] px-[10px] rounded-md font-medium border-[1px]'
+                                        className='w-[100%] flex items-center justify-between cursor-pointer text-[11.5px] bg-white py-[6px] px-[10px] rounded-md font-medium border-[1px] dark:bg-zinc-800 dark:text-white'
                                     >
                                         Select payment methods
                                         <IoMdArrowDropdown className='text-[14px]' />
                                 </button>
                                 {/* Categories options */}
                                 {openPaymentMethods && (
-                                    <div className="categories w-[100%] h-[22vh] absolute left-0 top-[1.9rem] bg-white py-2 px-3 rounded-sm shadow-sm border-[1px] border-slate-100 overflow-auto scrollbar scrollbar-thumb-slate-400 scrollbar-track-slate-700 scrollbar-w-[2px]">
+                                    <div className="categories w-[100%] h-fit absolute left-0 top-[1.9rem] bg-white py-2 px-3 rounded-sm shadow-sm border-[1px] border-slate-100 overflow-auto scrollbar scrollbar-thumb-slate-400 scrollbar-track-slate-700 scrollbar-w-[2px] dark:bg-zinc-800 dark:text-white">
                                         {paymentMethods?.map((method, index) => (
                                             <div
                                                 key={method?.id}
@@ -357,7 +361,7 @@ const SellerOnbording = () => {
                                 )}
                                 <div className="output">
                                     {selectedPaymentMethods?.map((method, index) => (
-                                        <div className="bg-white flex items-center justify-between gap-x-6  p-4 rounded-md mt-1 border-[1px] border-cyan-700" key={method?.id}>
+                                        <div className="bg-white flex items-center justify-between gap-x-6  p-4 rounded-md mt-1 border-[1px] border-cyan-700 dark:bg-zinc-800 dark:text-white" key={method?.id}>
                                             <div className="w-[100%] flex items-center gap-x-3">
                                                 {/* Radio box */}
                                                 <div className="min-w-[0.84rem] h-[0.8rem] border-[1.5px] border-cyan-700 rounded-full flex items-center justify-center">
@@ -390,9 +394,9 @@ const SellerOnbording = () => {
                     </div>
 
                     {/* Store Logo && Store Cover Img */}
-                    <div className="w-[100%] flex items-start gap-x-[0.1rem] my-[1.1rem]">
+                    <div className="w-[100%] flex flex-col items-start gap-y-[2rem]  my-[1.1rem] md:flex-row md:gap-x-[0.1rem]">
                         {/* Store Logo */}
-                        <div className="form-group w-[60%] flex flex-col">
+                        <div className="form-group w-[100%] flex flex-col md:w-[60%]">
                             <label htmlFor="" className='text-[13.5px] font-medium mb-2 flex items-center gap-x-1.5'>
                                 <ImUpload />
                                 Upload Store Logo
@@ -433,26 +437,26 @@ const SellerOnbording = () => {
                 <div className="layer mt-[3rem]">
                     <h2 className='text-[1rem] font-medium mb-[0.85rem]'>Primary Contact Information</h2>
                     {/* Store name | Store Address */}
-                    <div className="w-[100%] flex items-center gap-x-[1rem]">
+                    <div className="w-[100%] flex flex-col items-center gap-x-[1rem] md:flex-row">
                         <div className="form-group w-[100%] flex flex-col my-3">
                             <label htmlFor="" className='text-[13.5px] font-medium mb-2'>
                                 FullName:
                             </label>
-                            <input type="text" placeholder='Enter your fullname' className='text-[12px] py-[5px] px-[10px] rounded-md outline-none border-[1px]' />
+                            <input type="text" placeholder='Enter your fullname' className='text-[12px] py-[5px] px-[10px] rounded-md outline-none border-[1px] dark:bg-zinc-800 dark:text-white' />
                         </div>
 
                         <div className="form-group w-[100%] flex flex-col my-[1.1rem]">
                             <label htmlFor="" className='text-[13.5px] font-medium mb-2'>
                                 Phone Number:
                             </label>
-                            <input type="text" placeholder='Enter your phone number' className='text-[12px] py-[5px] px-[10px] rounded-md outline-none border-[1px]' />
+                            <input type="text" placeholder='Enter your phone number' className='text-[12px] py-[5px] px-[10px] rounded-md outline-none border-[1px] dark:bg-zinc-800 dark:text-white' />
                         </div>
 
                         <div className="form-group w-[100%] flex flex-col my-[1.1rem]">
                             <label htmlFor="" className='text-[13.5px] font-medium mb-2'>
                                 Email:
                             </label>
-                            <input type="text" placeholder='Enter your email' className='text-[12px] py-[5px] px-[10px] rounded-md outline-none border-[1px]' />
+                            <input type="text" placeholder='Enter your email' className='text-[12px] py-[5px] px-[10px] rounded-md outline-none border-[1px] dark:bg-zinc-800 dark:text-white' />
                         </div>
                     </div>
 
@@ -463,20 +467,20 @@ const SellerOnbording = () => {
                                 Social Links (If any):
                             </label>
 
-                            <div className="border-[0.5px] rounded-md flex">
+                            <div className="w-[100%] border-[0.5px] rounded-md flex flex-col gap-y-[10px] md:flex-row">
                                 <input
                                     type="text"
                                     id='socialContacts'
                                     name='socialContacts'
                                     placeholder='Paste link eg. https://www.instagram.com/mic__dev/'
-                                    className='w-[91%] rounded-l-md text-[12px] py-[5px] px-[10px] outline-none'
+                                    className='w-[100%] rounded-l-md text-[12px] py-[5px] px-[10px] outline-none dark:bg-zinc-800 dark:text-white'
                                     value={socialContact}
                                     onChange={(e) => setSocialContact(e.target.value)}
                                 />
                                 <button
                                     type='button'
                                     onClick={HandleContacts}
-                                    className='w-[9%] text-[10px] bg-zinc-700 text-white rounded-r-md px-[11px] font-medium'
+                                    className='text-[10px] bg-zinc-700 text-white rounded-r-md py-[5px] font-medium md:w-[10%] md:px-[5px] md:py-0 dark:bg-zinc-600 dark:text-white'
                                 >
                                     Add Link
                                 </button>
@@ -484,7 +488,7 @@ const SellerOnbording = () => {
                             {/* Output */}
                             <div className="output my-1.5">
                                 {socialContacts?.map((contact, index) => (
-                                    <div className="bg-white py-[5px] px-[10px] border-b-[1px] flex items-center justify-between rounded-md mb-1" key={index}>
+                                    <div className="bg-white py-[5px] px-[10px] border-b-[1px] flex items-center justify-between rounded-md mb-1 dark:bg-zinc-800 dark:text-white" key={index}>
                                         <p className='text-[12px]'>
                                             {contact}
                                         </p>

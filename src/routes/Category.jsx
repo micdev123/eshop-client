@@ -89,20 +89,20 @@ const Category = () => {
                             <div className="sort_container relative">
                                 <button
                                     onClick={() => setSortOptions(!sortOptions)}
-                                    className='w-fit text-[12px] bg-zinc-100  rounded-sm flex items-center gap-x-2 py-[4px] px-[20px] cursor-pointer hover:bg-zinc-50'>
+                                    className='w-fit text-[12px] bg-zinc-100  rounded-sm flex items-center gap-x-2 py-[4px] px-[20px] cursor-pointer hover:bg-zinc-50 dark:bg-zinc-800 dark:text-white'>
                                     <BsFilterLeft className='text-[13px]'
                                 />
                                     Sort By: <span className='text-[12px] font-medium'>{activeSort_option}</span>
                                 </button>
                                 {sortOptions && (
-                                    <div className="w-[100%] sort_options bg-zinc-100 border-[1px] rounded-md flex flex-col items-start gap-y-[5px] py-[1rem] absolute top-[30px] z-20">
+                                    <div className="w-[100%] sort_options bg-zinc-100 border-[1px] rounded-md flex flex-col items-start gap-y-[5px] py-[1rem] absolute top-[30px] z-20 dark:bg-zinc-800 dark:text-white">
                                         {sort_options.map((option, index) => (
                                             <button
                                                 onClick={() => {
                                                     setActiveSort_option(option);
                                                     setSortOptions(false);
                                                 }}
-                                                className={`text-[12px] py-[5px] px-4 ${activeSort_option === option ? 'font-medium' : 'text-zinc-500'}`}
+                                                className={`text-[12px] py-[5px] px-4 ${activeSort_option === option ? 'font-medium' : 'text-zinc-500 dark:text-zinc-400'}`}
                                                 key={index}
                                             >
                                                 {option}
@@ -112,7 +112,7 @@ const Category = () => {
                                 )}
                             </div>
                             <div className="display_type flex items-center gap-x-2">
-                                <button className='bg-zinc-100 p-[2px]'>
+                                <button className='bg-zinc-100 p-[2px] dark:bg-zinc-700 dark:text-white'>
                                     <BsFillGridFill />
                                 </button>
                                 <button>

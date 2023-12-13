@@ -153,7 +153,7 @@ const App = () => {
           </Routes> 
         </main>
         {/* Footer */}
-        <footer className='w-[92%] mx-auto md:w-[85%] z-10'>
+        <footer className='w-[92%] mx-auto xl:w-[85%] z-10'>
           <Footer />
         </footer>
       </Router>

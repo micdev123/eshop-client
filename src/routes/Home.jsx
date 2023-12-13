@@ -7,6 +7,7 @@ import LastMinuteDeals from '../components/Home/LastMinuteDeals'
 import Offers from '../components/Home/Offers'
 import TopSellers from '../components/Home/TopSellers'
 import YourSearchHistory from '../components/Home/YourSearchHistory'
+import BigSales from '../components/BigSales'
 const Home = () => {
     return (
         <div className='home'>
@@ -19,6 +20,7 @@ const Home = () => {
                 <TopSellers />
                 <LastMinuteDeals />
                 <YourSearchHistory />
+                <BigSales />
             </main>
         </div>
     )

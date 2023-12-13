@@ -7,7 +7,7 @@ const stores = ['e-shop', 'Amazon', 'ebay']
 
 const FilterOptions = ({ category, activeSub_category, activeFilter_options, settingFilterOption_active, onClose }) => {
     return (
-        <div className="filter_container w-[100%] fixed left-0 bottom-0 z-30 bg-white rounded-md pt-[3rem] px-[1rem] h-[40rem] overflow-auto scrollbar scrollbar-thumb-slate-400 scrollbar-track-slate-700 scrollbar-w-[1.8px] md:w-[100%] md:static md:h-[100%] md:pt-0 md:px-0 md:bg-transparent md:rounded-none">
+        <div className="filter_container w-[100%] fixed left-0 bottom-0 z-30 bg-white rounded-md pt-[3rem] px-[1rem] h-[40rem] overflow-auto scrollbar scrollbar-thumb-slate-400 scrollbar-track-slate-700 scrollbar-w-[1.8px] md:w-[100%] md:static md:h-[100%] md:pt-0 md:px-0 md:bg-transparent md:rounded-none dark:text-white">
             {/* Button to close mobile filter options */}
             <button
                 onClick={onClose}
@@ -17,7 +17,7 @@ const FilterOptions = ({ category, activeSub_category, activeFilter_options, set
             </button>
             {/* Featured Stores */}
             <div className="mb-[2rem]">
-                <h2 className='text-[14px] font-medium border-b-[1px] border-zinc-100 pb-[3px] mb-[8px]'>
+                <h2 className='text-[14px] font-medium border-b-[1px] border-zinc-100 pb-[3px] mb-[8px] dark:border-zinc-800'>
                     Featured Stores
                 </h2>
                 <div className="options">
@@ -40,7 +40,7 @@ const FilterOptions = ({ category, activeSub_category, activeFilter_options, set
             </div>
             {/* Customer Reviews */}
             <div className="">
-                <h2 className='text-[14px] font-medium border-b-[1px] border-zinc-100 pb-[3px] mb-[8px]'>
+                <h2 className='text-[14px] font-medium border-b-[1px] border-zinc-100 pb-[3px] mb-[8px] dark:border-zinc-800'>
                     Customer Reviews
                 </h2>
                 <div className="mb-[2rem]">
@@ -61,7 +61,7 @@ const FilterOptions = ({ category, activeSub_category, activeFilter_options, set
             </div>
             {/* Price Range */}
             <div className="mb-[2rem]">
-                <h2 className='text-[14px] font-medium border-b-[1px] border-zinc-100 pb-[3px] mb-[8px]'>
+                <h2 className='text-[14px] font-medium border-b-[1px] border-zinc-100 pb-[3px] mb-[8px] dark:border-zinc-800'>
                     Price Range
                 </h2>
                 
@@ -108,10 +108,10 @@ const FilterOptions = ({ category, activeSub_category, activeFilter_options, set
                     category.filterOptions &&
                     category.filterOptions.map((options) => (
                         <div className="filter mb-[20px] last:mb-0" key={options?.id}>
-                            <h2 className='text-[14px] font-medium border-b-[1px] border-zinc-100 pb-[3px] mb-[8px]'>
+                            <h2 className='text-[14px] font-medium border-b-[1px] border-zinc-100 pb-[3px] mb-[8px] dark:border-zinc-800'>
                                 {options?.name}
                             </h2>
-                            <div className={`min-h-fit overflow-auto scrollbar scrollbar-thumb-slate-400 scrollbar-track-slate-700 scrollbar-w-[1.8px] cursor-pointer border-b-[1px] border-zinc-100 pb-[5px] ${options?.options.length > 4 && 'grid grid-cols-2'} md:block`}>
+                            <div className={`min-h-fit overflow-auto scrollbar scrollbar-thumb-slate-400 scrollbar-track-slate-700 scrollbar-w-[1.8px] cursor-pointer border-b-[1px] border-zinc-100 pb-[5px] dark:border-zinc-800 ${options?.options.length > 4 && 'grid grid-cols-2'} md:block`}>
                                 {options?.options.map((option)=> (
                                     <label htmlFor={option} className='text-[13px] flex items-center gap-x-1 mb-[8px] cursor-pointer hover:font-medium' key={option}>
                                         <input
@@ -138,10 +138,10 @@ const FilterOptions = ({ category, activeSub_category, activeFilter_options, set
                             return (
                                 filterOptions !== null && filterOptions?.map((options) => (
                                     <div className="filter mb-[20px] last:mb-0" key={options?.id}>
-                                        <h2 className='text-[14px] font-medium border-b-[1px] border-zinc-100 pb-[3px] mb-[8px]'>
+                                        <h2 className='text-[14px] font-medium border-b-[1px] border-zinc-100 pb-[3px] mb-[8px] dark:border-zinc-800'>
                                             {options?.name}
                                         </h2>
-                                        <div className={`min-h-fit overflow-auto scrollbar scrollbar-thumb-slate-400 scrollbar-track-slate-700 scrollbar-w-[1.8px] cursor-pointer border-b-[1px] border-zinc-100 pb-[5px] ${options?.options.length > 4 && 'grid grid-cols-2'} md:block`}>
+                                        <div className={`min-h-fit overflow-auto scrollbar scrollbar-thumb-slate-400 scrollbar-track-slate-700 scrollbar-w-[1.8px] cursor-pointer border-b-[1px] border-zinc-100 pb-[5px] dark:border-zinc-800 ${options?.options.length > 4 && 'grid grid-cols-2'} md:block`}>
                                             {options?.options.map((option)=> (
                                                 <label htmlFor={option} className='text-[13px] flex items-center gap-x-1 mb-[8px] cursor-pointer hover:font-medium' key={option}>
                                                     <input

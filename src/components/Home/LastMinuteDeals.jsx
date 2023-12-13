@@ -2,6 +2,8 @@ import React, { useEffect, useRef, useState } from 'react'
 import { BiLeftArrowCircle, BiRightArrowCircle } from 'react-icons/bi'
 import { dealTypes, lastMinuteDeals } from '../../data';
 import Deal from '../Deal';
+import { MdNavigateNext } from 'react-icons/md';
+import { GrFormPrevious } from 'react-icons/gr';
 
 // let count = 0;
 const LastMinuteDeals = () => {
@@ -73,13 +75,15 @@ const LastMinuteDeals = () => {
     return (
         <section className='my-[3rem] w-[100%]'>
             <div className="last_minute_deal_header flex items-center justify-between mb-[10px] dark:text-slate-200">
-                <h2 className='text-[14px] font-medium text-black lg:text-[15px] dark:text-slate-200'>Last Minute Deals</h2>
+                <h2 className='text-[14px] font-medium text-black lg:text-[15px] dark:text-slate-200'>
+                    Last Minute Deals
+                </h2>
                 <div className="navigation flex items-center xl:hidden">
-                    <BiLeftArrowCircle
+                    <GrFormPrevious
                         onClick={handleLeftSlide}
                         className='text-[1.1rem] mr-2 cursor-pointer'
                     />
-                    <BiRightArrowCircle
+                    <MdNavigateNext
                         onClick={handleRightSlide}
                         className='text-[1.1rem] cursor-pointer'
                     />
@@ -106,15 +110,15 @@ const LastMinuteDeals = () => {
                                             deal={currDeals}
                                         />
                                     </div>
-                                    <div className="next_slide">
-                                        <BiRightArrowCircle
+                                    <button className="next_slide border-[1px] border-zinc-700 rounded-full">
+                                        <MdNavigateNext
                                             onClick={() => handleNext(index)}
-                                            className='text-[1.1rem] cursor-pointer'
+                                            className='text-[0.9rem] cursor-pointer'
                                         />
-                                    </div>
+                                    </button>
                                 </div>
                             </div>
-                            <div className="right the_her_img w-[16rem] h-[12rem] md:h-[16rem]">
+                            <div className="right the_her_img w-[16rem] h-[12rem] md:h-[18rem]">
                                 <img src={img} alt={`the_${dealFor}_img`} className='w-[100%] h-[100%] object-contain' />
                             </div>
                         </div>

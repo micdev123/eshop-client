@@ -13,7 +13,7 @@ const FeaturedCategory = ({ category }) => {
                 </p>
             </Link>
             <Link to={`/category/${category?.slug}`}
-                className='hidden text-[12px] py-[5px] px-[25px] bg-zinc-800 text-white rounded-sm outline-none border-0 md:block w-fit'
+                className='hidden text-[12px] py-[6px] px-[25px] bg-zinc-800 text-white rounded-md outline-none border-0 md:block w-fit'
             >
                 Explore
             </Link>
